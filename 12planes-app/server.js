@@ -110,6 +110,7 @@ function serveFile(res, rel) {
 
 // ---------- write rules (enforced here, not only in the page) ----------
 async function canWrite(p, mode, op, col, id, data) {
+  if (p.role !== 'team' && (String(id || '').startsWith('wip-') || String((data && data.node) || '').startsWith('wip-'))) return false;
   switch (col) {
     case 'content': return mode === 'edit';
     case 'decisions': return mode === 'edit' && op === 'add';
@@ -138,13 +139,14 @@ async function api(req, res, url, p) {
   }
   if (req.method === 'GET' && parts[1] === 'state') {
     const cols = String(url.searchParams.get('cols') || '').split(',').filter(c => COLS.has(c));
-    const out = {}; for (const c of cols) out[c] = await store.list(c);
+    const isWip = d => String(d.id).startsWith('wip-') || String((d.data && d.data.node) || '').startsWith('wip-');
+    const out = {}; for (const c of cols) { const all = await store.list(c); out[c] = p.role === 'team' ? all : all.filter(d => !isWip(d)); }
     return json(res, 200, out);
   }
   if (parts[1] === 'd' && parts.length === 4) { // /api/d/:col/:id
     const [col, id] = [parts[2], decodeURIComponent(parts[3])];
     if (!COLS.has(col) || !ID_RE.test(id)) return json(res, 400, { error: 'invalid_argument' });
-    if (req.method === 'GET') { const d = await store.get(col, id); return json(res, 200, d || { id, data: null }); }
+    if (req.method === 'GET') { if (p.role !== 'team' && id.startsWith('wip-')) return json(res, 200, { id, data: null }); const d = await store.get(col, id); return json(res, 200, d || { id, data: null }); }
     if (req.method === 'PUT' || req.method === 'PATCH') {
       const body = await readBody(req);
       if (!body || typeof body !== 'object' || Array.isArray(body)) return json(res, 400, { error: 'invalid_argument' });
@@ -254,6 +256,7 @@ const server = http.createServer(async (req, res) => {
     if (!p) { res.writeHead(302, { location: '/login.html' }); return res.end(); }
     if (url.pathname === '/') return serveFile(res, '/start.html');
     if (url.pathname === '/admin.html' && !p.admin) { res.writeHead(302, { location: '/' }); return res.end(); }
+    if (url.pathname === '/wip.json' && p.role !== 'team') { res.writeHead(404, { 'content-type': 'text/plain' }); return res.end('Not found'); }
     return serveFile(res, url.pathname);
   } catch (e) {
     console.error(e);
