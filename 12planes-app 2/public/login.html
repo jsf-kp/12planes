@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>12 Planes · Sign in</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root { --ink: #080808; --muted: #444; --line: #dbd9d6; --card: #f5f0f0; --gold: #917d46; --warn: #974d32;
+  --f-display: "Kontrapunkt Tomo Slab", "Roboto Slab", Georgia, serif; --f-body: "Kontrapunkt Tomo Sans", "Inter", system-ui, sans-serif; }
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { margin: 0; height: 100%; }
+body { background: #080808; color: #fff; font-family: var(--f-body); display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); }
+@media (max-width: 860px) { body { grid-template-columns: minmax(0, 1fr); } .side { display: none; } }
+.side { padding: 40px; display: flex; flex-direction: column; justify-content: space-between; }
+.side .kp { font-family: var(--f-display); font-size: 20px; }
+.side h1 { font-family: var(--f-display); font-weight: 300; font-size: clamp(48px, 6vw, 112px); line-height: 1.02; margin: 0; }
+.side h1 span { color: var(--gold); display: block; }
+.side small { font-family: var(--f-display); font-size: 11px; color: #a8a6a2; }
+main { background: #fff; color: var(--ink); padding: max(32px, 6vw) max(24px, 5vw); display: flex; flex-direction: column; justify-content: center; gap: 22px; }
+.lbl { font-size: 12px; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; color: var(--gold); }
+h2 { font-family: var(--f-display); font-weight: 300; font-size: clamp(28px, 3vw, 44px); margin: 0; }
+p { margin: 0; color: var(--muted); line-height: 1.5; max-width: 42ch; }
+form { display: flex; flex-direction: column; gap: 12px; max-width: 380px; }
+label { font-size: 13px; color: var(--muted); }
+input { font: inherit; font-size: 16px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 2px; background: #fff; color: var(--ink); width: 100%; }
+input:focus { outline: 2px solid var(--gold); outline-offset: 1px; }
+#code { letter-spacing: 8px; font-size: 22px; }
+button { font: inherit; font-weight: 600; font-size: 14px; padding: 12px 18px; border: 0; border-radius: 999px; background: var(--ink); color: #fff; cursor: pointer; }
+button:disabled { opacity: .5; cursor: default; }
+button.link { background: none; color: var(--gold); padding: 0; text-align: left; font-weight: 500; text-decoration: underline; text-underline-offset: 3px; }
+.msg { font-size: 14px; color: var(--warn); min-height: 1.2em; }
+footer { font-family: var(--f-display); font-size: 11px; color: var(--muted); }
+</style>
+</head>
+<body>
+  <aside class="side"><span class="kp">Kontrapunkt</span><h1><span>12Planes</span>Strategy and Sprint 1</h1><small>© Kontrapunkt</small></aside>
+  <main>
+    <span class="lbl">Sign in</span>
+    <h2>Welcome</h2>
+    <p>Type your name and the password you were given. Your name shows next to the changes you make.</p>
+    <form id="f">
+      <label for="name">Your name</label>
+      <input id="name" autocomplete="name" required>
+      <label for="pw">Password</label>
+      <input id="pw" type="password" autocomplete="current-password" required>
+      <button type="submit" id="go">Sign in</button>
+    </form>
+    <div class="msg" id="msg" role="status"></div>
+    <footer>© Kontrapunkt</footer>
+  </main>
+<script src="/login.js"></script>
+</body>
+</html>
