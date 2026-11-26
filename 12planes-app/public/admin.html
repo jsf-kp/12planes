@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>12 Planes · Access</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root { --ink: #080808; --muted: #444; --line: #dbd9d6; --card: #f5f0f0; --gold: #917d46; --warn: #974d32;
+  --f-display: "Kontrapunkt Tomo Slab", "Roboto Slab", Georgia, serif; --f-body: "Kontrapunkt Tomo Sans", "Inter", system-ui, sans-serif; }
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: #fff; color: var(--ink); font-family: var(--f-body); padding: 32px max(16px, 4vw) 64px; }
+.wrap { max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px; }
+.lbl { font-size: 12px; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; color: var(--gold); }
+h1 { font-family: var(--f-display); font-weight: 300; font-size: clamp(30px, 3vw, 48px); margin: 0; }
+p { margin: 0; color: var(--muted); line-height: 1.5; }
+a { color: var(--gold); }
+form { display: grid; grid-template-columns: 1.4fr 1fr .9fr auto auto; gap: 8px; align-items: center; background: var(--card); padding: 16px; border-radius: 2px; }
+@media (max-width: 760px) { form { grid-template-columns: 1fr; } }
+input, select { font: inherit; font-size: 14px; padding: 9px 10px; border: 1px solid var(--line); border-radius: 2px; background: #fff; color: var(--ink); width: 100%; }
+button { font: inherit; font-weight: 600; font-size: 13px; padding: 9px 16px; border: 0; border-radius: 999px; background: var(--ink); color: #fff; cursor: pointer; }
+label.chk { display: flex; gap: 6px; align-items: center; font-size: 13px; color: var(--muted); white-space: nowrap; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th { text-align: left; font-size: 11px; letter-spacing: .03em; text-transform: uppercase; color: var(--muted); font-weight: 600; padding: 8px 6px; border-bottom: 1px solid var(--line); }
+td { padding: 10px 6px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+td select { width: auto; }
+.msg { font-size: 14px; color: var(--warn); min-height: 1.2em; }
+.off td { color: #999; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div><span class="lbl">12 Planes strategy · Access</span><h1>Who can sign in</h1></div>
+  <p>Add people by email. Team members edit directly. Client members suggest, and the team accepts or rejects their suggestions. Admins can manage this list. Turning someone off signs them out on their next action. <a href="/">Back to the map</a></p>
+  <form id="add">
+    <input id="email" type="email" placeholder="name@company.com" required aria-label="Email">
+    <input id="name" placeholder="Name" aria-label="Name">
+    <select id="role" aria-label="Role"><option value="client">Client · suggests</option><option value="team">Team · edits</option></select>
+    <label class="chk"><input type="checkbox" id="admin"> Admin</label>
+    <button type="submit">Add</button>
+  </form>
+  <div class="msg" id="msg" role="status"></div>
+  <table><thead><tr><th>Name</th><th>Email</th><th>Role</th><th>Admin</th><th>Access</th></tr></thead><tbody id="rows"></tbody></table>
+</div>
+<script>
+(function () {
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  let people = [];
+  async function load() {
+    const r = await fetch('/api/admin/people'); if (!r.ok) { location.href = '/'; return; }
+    people = await r.json(); render();
+  }
+  function render() {
+    $('rows').innerHTML = people.map(p => `<tr class="${p.active ? '' : 'off'}" data-email="${esc(p.email)}">
+      <td>${esc(p.name) || '<span style="color:#999">No name</span>'}</td><td>${esc(p.email)}</td>
+      <td><select data-f="role"><option value="client" ${p.role === 'client' ? 'selected' : ''}>Client · suggests</option><option value="team" ${p.role === 'team' ? 'selected' : ''}>Team · edits</option></select></td>
+      <td><input type="checkbox" data-f="admin" ${p.admin ? 'checked' : ''} ${p.role !== 'team' ? 'disabled' : ''} aria-label="Admin"></td>
+      <td><select data-f="active"><option value="1" ${p.active ? 'selected' : ''}>On</option><option value="0" ${!p.active ? 'selected' : ''}>Off</option></select></td></tr>`).join('');
+  }
+  async function save(p) {
+    const r = await fetch('/api/admin/people', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(p) });
+    const j = await r.json(); if (!r.ok) throw new Error(j.error || 'That did not save.'); return j;
+  }
+  $('add').addEventListener('submit', async e => {
+    e.preventDefault(); $('msg').textContent = '';
+    try { await save({ email: $('email').value, name: $('name').value, role: $('role').value, admin: $('admin').checked }); $('email').value = ''; $('name').value = ''; $('admin').checked = false; load(); $('msg').textContent = 'Added. Send them the link: ' + location.origin; }
+    catch (x) { $('msg').textContent = x.message; }
+  });
+  $('rows').addEventListener('change', async e => {
+    const tr = e.target.closest('tr'); const p = people.find(x => x.email === tr.dataset.email); if (!p) return;
+    const f = e.target.dataset.f;
+    const next = { ...p, [f]: f === 'admin' ? e.target.checked : f === 'active' ? e.target.value === '1' : e.target.value };
+    if (next.role !== 'team') next.admin = false;
+    try { await save(next); load(); } catch (x) { $('msg').textContent = x.message; }
+  });
+  load();
+})();
+</script>
+</body>
+</html>
