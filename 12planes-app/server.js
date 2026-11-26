@@ -103,7 +103,7 @@ function serveFile(res, rel) {
   if (!file.startsWith(PUB + path.sep)) { res.writeHead(404); return res.end(); }
   fs.readFile(file, (err, buf) => {
     if (err) { res.writeHead(404, { 'content-type': 'text/plain' }); return res.end('Not found'); }
-    res.writeHead(200, { 'content-type': TYPES[path.extname(file)] || 'application/octet-stream', 'cache-control': rel.endsWith('.html') || rel.endsWith('.json') ? 'no-cache' : 'public, max-age=3600' });
+    res.writeHead(200, { 'content-type': TYPES[path.extname(file)] || 'application/octet-stream', 'cache-control': /\.(html|json|js|css)$/.test(rel) ? 'no-cache' : 'public, max-age=3600' });
     res.end(buf);
   });
 }
