@@ -1,0 +1,3417 @@
+{
+  "meta": {
+    "project": "12 Planes brand",
+    "client": "12 Planes (Eclipse PortCo)",
+    "agency": "Kontrapunkt",
+    "version": "1.5",
+    "sprint": "Sprint 1",
+    "updated": "2026-11-25",
+    "derivedFrom": {
+      "label": "12Planes_Sprint-1-Presentation_WIP (Figma Slides, 69 slides)"
+    },
+    "statusValues": {
+      "draft": "Our current thinking, not yet reacted to by the client",
+      "validated": "Client has reacted and agrees",
+      "decided": "Locked, later work builds on it",
+      "superseded": "Replaced by a later item, kept for traceability"
+    },
+    "sourceTiers": {
+      "primary": "The organisation itself or official data (FAA, CRS, Gallup, OWASP)",
+      "tier1": "Major news or research outlet (Fortune, Washington Post, NPR, Apollo, CNAS)",
+      "trade": "Trade or specialist press",
+      "field": "Founder or investor proof point from their own industry work"
+    }
+  },
+  "question": {
+    "id": "Q1",
+    "text": "How do we start a category the world doesn't have a name for yet, and become the one that leads it?",
+    "evidence": [
+      "E-lior-01",
+      "E-naor-05",
+      "E-ilia-04",
+      "E-lior-04",
+      "E-ilia-03"
+    ],
+    "slides": [
+      "86:1991",
+      "84:1510"
+    ],
+    "history": [
+      {
+        "text": "How might we lead with security without becoming another cyber company?",
+        "version": "0.1",
+        "reason": "Reframed from a defensive question (how not to look like cyber) to category creation, at a level of ambition that matches the founders."
+      }
+    ]
+  },
+  "answer": {
+    "id": "A1",
+    "headline": "Every token is born in a data center. 12 Planes makes the data center as intelligent as what it creates.",
+    "body": "The most important machines on earth are still run the way they were 30 years ago: in pieces, by hand, behind fences. 12 Planes sees every plane at once, from the ground to the token, and makes all of it better every day. It starts with security, because trust comes first. It doesn't stop there.",
+    "supportedBy": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "PR1",
+      "PR2",
+      "PR3"
+    ],
+    "status": "draft",
+    "slides": [
+      "84:1482",
+      "84:1520"
+    ],
+    "history": [
+      {
+        "text": "Nobody owns calm, provable trust in the place where AI runs. 12 Planes can.",
+        "body": "Security brands borrow their authority and sell fear. Data center brands sell parts. The brands that moved their category earned authority with one simple idea. The open space is authority 12 Planes earns itself, across the whole data center, starting with security.",
+        "version": "0.1",
+        "reason": "Elevated to match the new key question."
+      }
+    ]
+  },
+  "pillars": [
+    {
+      "id": "PL-market",
+      "title": "Understanding the market",
+      "insights": [
+        "I-m1",
+        "I-m2",
+        "I-m3"
+      ]
+    },
+    {
+      "id": "PL-industry",
+      "title": "Understanding the industry",
+      "insights": [
+        "I-i1",
+        "I-i2",
+        "I-i3"
+      ]
+    },
+    {
+      "id": "PL-12p",
+      "title": "Understanding 12 Planes",
+      "insights": [
+        "I-c1",
+        "I-c2",
+        "I-c3"
+      ]
+    }
+  ],
+  "insights": [
+    {
+      "id": "I-m1",
+      "pillar": "PL-market",
+      "headline": "The problem has gone public",
+      "body": "In one week in November, Microsoft, the FAA and Chase failed within days of each other, drawing 6.4 million outage reports. None was a cyberattack. Each traced back to ageing equipment or a defect nobody had caught. Demand for compute keeps running ahead of what anyone can build, understand or secure.",
+      "evidence": [
+        "E-desk-01",
+        "E-desk-02",
+        "E-desk-03",
+        "E-desk-04",
+        "E-naor-05",
+        "E-ext-01",
+        "E-ext-02",
+        "E-ext-04",
+        "E-field-01",
+        "E-ext-10"
+      ],
+      "status": "draft",
+      "confidence": "high",
+      "slides": [
+        "84:1094",
+        "84:1099",
+        "84:1118",
+        "84:1482"
+      ],
+      "history": [
+        {
+          "text": "The problem has gone public",
+          "body": "AI infrastructure is moving faster than anyone can understand or secure it. Recent outages showed infrastructure nobody fully understands.",
+          "version": "0.2",
+          "reason": "Sourced and sharpened."
+        }
+      ]
+    },
+    {
+      "id": "I-m2",
+      "pillar": "PL-market",
+      "headline": "Accountability is the new test",
+      "body": "Around seven in ten Americans oppose an AI data center near them, and in November voters passed more than 20 measures to ban or restrict them. Data centers have become the visible face of the AI backlash. Transparency and proof count more than celebrity.",
+      "evidence": [
+        "E-desk-05",
+        "E-ext-05",
+        "E-ext-06",
+        "E-ext-07"
+      ],
+      "status": "draft",
+      "confidence": "high",
+      "slides": [
+        "84:1482"
+      ],
+      "history": [
+        {
+          "text": "Accountability is the new test",
+          "body": "Data centers have become the visible face of the AI backlash. Transparency and proof count more than celebrity.",
+          "version": "0.2",
+          "reason": "Sourced and sharpened."
+        }
+      ]
+    },
+    {
+      "id": "I-m3",
+      "pillar": "PL-market",
+      "headline": "The race for the standard has started",
+      "body": "Irregular sets security standards for frontier models. Lava leads an OWASP top 10 for neocloud and AI data center risks. Standards are forming around single slices. Nobody yet speaks for the data center as a whole.",
+      "evidence": [
+        "E-desk-06",
+        "E-web-18",
+        "E-ext-13",
+        "E-ext-14",
+        "E-ext-15"
+      ],
+      "status": "draft",
+      "confidence": "medium",
+      "slides": [
+        "84:1482",
+        "84:1154"
+      ],
+      "history": [
+        {
+          "text": "The race for the standard has started",
+          "body": "Irregular sets it for models, Lava for neocloud risk. The data center as a whole is still unclaimed.",
+          "version": "0.2",
+          "reason": "Sourced and sharpened."
+        },
+        {
+          "text": "The race for the standard has started",
+          "body": "Irregular sets security standards for frontier models. Lava now leads an OWASP top 10 for neocloud and AI data center risks. Standards are forming around the data center, but nobody yet speaks for the whole of it.",
+          "version": "0.3",
+          "reason": "Softened: Lava and OWASP already cover AI data center risks, so the data center is not unclaimed."
+        }
+      ]
+    },
+    {
+      "id": "I-i1",
+      "pillar": "PL-industry",
+      "headline": "Security borrows its authority",
+      "body": "Analyst badges and leadership claims reassure buyers, but every brand sounds alike. Fear has moved from the copy into the names, and the words 'leader' and 'AI factory' are taken.",
+      "evidence": [
+        "E-web-01",
+        "E-web-02",
+        "E-web-03",
+        "E-web-04",
+        "E-web-05",
+        "E-web-06",
+        "E-web-07",
+        "E-web-08"
+      ],
+      "status": "draft",
+      "confidence": "high",
+      "slides": [
+        "84:1247",
+        "84:1276",
+        "84:1312",
+        "84:1293",
+        "84:1331"
+      ]
+    },
+    {
+      "id": "I-i2",
+      "pillar": "PL-industry",
+      "headline": "The data center has no story",
+      "body": "Everyone sells a part of the data center. Nobody speaks for the whole. The closest neighbours sell equipment and connection, not trust. Equinix is the exception with a clear one-sentence position.",
+      "evidence": [
+        "E-web-09",
+        "E-web-10",
+        "E-web-11",
+        "E-web-12",
+        "E-web-18"
+      ],
+      "status": "draft",
+      "confidence": "high",
+      "slides": [
+        "84:1345",
+        "84:1373",
+        "84:1386",
+        "84:1154"
+      ]
+    },
+    {
+      "id": "I-i3",
+      "pillar": "PL-industry",
+      "headline": "Category leaders keep it simple",
+      "body": "One idea, one sentence, one image. The mission, not the feature list. Their authority is their own.",
+      "evidence": [
+        "E-web-13",
+        "E-web-14",
+        "E-web-15",
+        "E-web-16",
+        "E-naor-04",
+        "E-ilia-06"
+      ],
+      "status": "draft",
+      "confidence": "high",
+      "slides": [
+        "84:1399",
+        "84:1428",
+        "84:1444",
+        "84:1463"
+      ]
+    },
+    {
+      "id": "I-c1",
+      "pillar": "PL-12p",
+      "headline": "Security is the first plane, not the last",
+      "body": "Lead with security for 18 to 24 months, then operations, then autonomy. The bigger vision is shared step by step.",
+      "evidence": [
+        "E-ilia-01",
+        "E-ilia-02",
+        "E-ilia-03",
+        "E-ilia-04",
+        "E-naor-01"
+      ],
+      "status": "draft",
+      "confidence": "high",
+      "slides": [
+        "51:235",
+        "84:1482"
+      ]
+    },
+    {
+      "id": "I-c2",
+      "pillar": "PL-12p",
+      "headline": "Calm, not fear",
+      "body": "The founders want trust and uptime as the value. Security should stop being the brake on the business.",
+      "evidence": [
+        "E-naor-02",
+        "E-naor-03",
+        "E-naor-06",
+        "E-ilia-05"
+      ],
+      "status": "draft",
+      "confidence": "high",
+      "slides": [
+        "51:249",
+        "51:235",
+        "96:83"
+      ]
+    },
+    {
+      "id": "I-c3",
+      "pillar": "PL-12p",
+      "headline": "A standard, not another vendor",
+      "body": "12 Planes should write the standard for a sector that does not exist yet. A stamp of approval, like the FDA, and nothing that feels like cyber.",
+      "evidence": [
+        "E-lior-01",
+        "E-lior-02",
+        "E-lior-03",
+        "E-lior-04",
+        "E-lior-05"
+      ],
+      "status": "draft",
+      "confidence": "high",
+      "slides": [
+        "51:261"
+      ]
+    }
+  ],
+  "principles": [
+    {
+      "id": "P1",
+      "headline": "Earn it in public",
+      "body": "Authority in a new category can't be borrowed from analyst badges. It is earned in the open: what 12 Planes finds, what it fixes, and every extra nine of uptime.",
+      "derivedFrom": [
+        "I-i1",
+        "I-m2",
+        "I-c3"
+      ],
+      "status": "draft",
+      "slides": [
+        "84:1247"
+      ],
+      "history": [
+        {
+          "text": "Make proof the brand",
+          "body": "Earn authority by showing what 12 Planes knows, instead of borrowing it from analysts and logo walls.",
+          "version": "0.1",
+          "reason": "Elevated copy."
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "headline": "Answer for the whole",
+      "body": "Everyone else sells a part of the data center. 12 Planes understands all twelve planes, from the dirt to the token, and stands behind every one.",
+      "derivedFrom": [
+        "I-i2",
+        "I-m3"
+      ],
+      "status": "draft",
+      "slides": [
+        "84:1345",
+        "84:1373"
+      ],
+      "history": [
+        {
+          "text": "Speak for the whole data center",
+          "body": "Equinix owns connection. 12 Planes can own understanding and trust across every plane, from dirt to token.",
+          "version": "0.1",
+          "reason": "Elevated copy."
+        }
+      ]
+    },
+    {
+      "id": "P3",
+      "headline": "Confidence, not fear",
+      "body": "Fear sells locks. Confidence lets people build. 12 Planes is what lets AI go further, faster.",
+      "derivedFrom": [
+        "I-c2",
+        "I-i1"
+      ],
+      "status": "draft",
+      "slides": [
+        "51:273",
+        "84:1331"
+      ],
+      "history": [
+        {
+          "text": "Calm, not fear",
+          "body": "Uptime and trust are the value. Security is what lets AI go further, faster, not the brake.",
+          "version": "0.1",
+          "reason": "Elevated copy."
+        }
+      ]
+    },
+    {
+      "id": "P4",
+      "headline": "Make the complex feel simple",
+      "body": "The most complex system on earth deserves the simplest idea. One sentence, one image, and room to grow into.",
+      "derivedFrom": [
+        "I-i3"
+      ],
+      "status": "draft",
+      "slides": [
+        "84:1399"
+      ],
+      "history": [
+        {
+          "text": "The more complex the product, the simpler the claim",
+          "body": "One idea, one sentence, one image. Short enough to remember, large enough to grow into.",
+          "version": "0.1",
+          "reason": "Elevated copy."
+        }
+      ]
+    },
+    {
+      "id": "P5",
+      "headline": "Start with security. Never stop there.",
+      "body": "Secure it first, then run it, then let it run itself. The brand moves as fast as the product, and never stands still.",
+      "derivedFrom": [
+        "I-c1",
+        "I-c3",
+        "I-m3"
+      ],
+      "status": "draft",
+      "slides": [
+        "84:1579"
+      ],
+      "note": "Marked in the deck as inspiration for Sprint 2 and activation, not a plan.",
+      "history": [
+        {
+          "text": "From stealth to standard, one layer at a time",
+          "body": "Come out of stealth with one clear claim, prove it by publishing openly, then set the standard others measure against. The brand grows with the product from security to operations to autonomy.",
+          "version": "0.1",
+          "reason": "Elevated copy."
+        }
+      ]
+    }
+  ],
+  "shifts": {
+    "id": "SH1",
+    "headline": "From guarding the perimeter to securing the origin",
+    "slides": [
+      "51:273"
+    ],
+    "rows": [
+      {
+        "from": "Fences, cameras and borrowed cloud tools",
+        "to": "Security where the token is born",
+        "who": [
+          "Lior"
+        ]
+      },
+      {
+        "from": "Fear as the reason to buy",
+        "to": "Uptime and trust as the value",
+        "who": [
+          "Naor"
+        ]
+      },
+      {
+        "from": "The brake on the business",
+        "to": "What lets AI go further, and faster",
+        "who": [
+          "Naor"
+        ]
+      },
+      {
+        "from": "One slice of the stack",
+        "to": "Every plane, from dirt to token",
+        "who": [
+          "Ilia",
+          "Naor"
+        ]
+      },
+      {
+        "from": "A vendor you buy from",
+        "to": "The standard you are measured against",
+        "who": [
+          "Lior"
+        ]
+      },
+      {
+        "from": "Another cyber company",
+        "to": "A lab that defines its own category",
+        "who": [
+          "Lior",
+          "Ilia"
+        ]
+      }
+    ]
+  },
+  "positioningMap": {
+    "id": "M1",
+    "headline": "The open space is authority 12 Planes earns itself",
+    "xAxis": {
+      "left": "Borrowed authority",
+      "right": "Own authority"
+    },
+    "yAxis": {
+      "top": "The world in focus",
+      "bottom": "The brand in focus"
+    },
+    "note": "Security brands cluster where authority is borrowed and the product is the hero. The brands that moved category sit opposite. Next to them, the space is still open.",
+    "slides": [
+      "84:1520",
+      "84:1767"
+    ],
+    "positionsStatus": "Coordinates to be read from the Figma slide, not yet captured"
+  },
+  "territories": [
+    {
+      "id": "T1",
+      "name": "The Architect",
+      "archetype": "The enabler as the one who designs the future, rethinking from first principles how intelligence should be built.",
+      "direction": "Layers",
+      "idea": "Twelve planes, from the dirt to the tokens. Looks like a flat stack, is really a three-dimensional problem. 12 Planes is the single view that holds every facet at once.",
+      "visualLanguage": [
+        "Folded paper",
+        "Sculpture",
+        "Geometric form"
+      ],
+      "evidence": [
+        "E-naor-07"
+      ],
+      "expresses": [
+        "P2",
+        "P4"
+      ],
+      "status": "draft",
+      "slides": [
+        "84:1842",
+        "94:71",
+        "94:76",
+        "94:127",
+        "94:182",
+        "94:268"
+      ],
+      "image": "img/architect.jpg",
+      "role": "12 Planes designs how intelligence should be built, from first principles.",
+      "line": "Rethinking how intelligence is built.",
+      "answers": [
+        {
+          "job": "J1",
+          "strength": "strong",
+          "how": "Turns twelve planes, from the dirt to the token, into one designed structure that can be seen and turned."
+        },
+        {
+          "job": "J2",
+          "strength": "partial",
+          "how": "Structure signals integrity, but says little about proof or the public."
+        },
+        {
+          "job": "J3",
+          "strength": "strong",
+          "how": "The architect draws the blueprint others build to. A standard is a design."
+        },
+        {
+          "job": "J4",
+          "strength": "partial",
+          "how": "Calm and precise, but cool. Confidence comes from order, not warmth."
+        },
+        {
+          "job": "J5",
+          "strength": "strong",
+          "how": "The name is the idea. 12 Planes needs no explaining once you see the form."
+        },
+        {
+          "job": "J6",
+          "strength": "partial",
+          "how": "New planes can be added, but a finished design can feel fixed."
+        },
+        {
+          "job": "J7",
+          "strength": "strong",
+          "how": "First principles is the opposite of patching a 30-year-old stack."
+        }
+      ],
+      "strongest": "The most direct answer to starting and leading a category. It owns the name, the whole and the standard in one idea.",
+      "risk": "Can turn cold and abstract, closer to an engineering firm than a movement. Needs warmth and proof added.",
+      "hotspots": [
+        {
+          "x": 16,
+          "y": 70,
+          "title": "One form, many faces",
+          "text": "The twelve planes as one object you turn, not a flat stack. Every face depends on the others.",
+          "link": "I-i2"
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "title": "Edges you only see as you turn it",
+          "text": "The real problem is three-dimensional. That is why nobody understands it from one slice.",
+          "link": "I-m1"
+        },
+        {
+          "x": 50,
+          "y": 17,
+          "title": "Legacy, re-formed",
+          "text": "Old technology in sequence. The architect takes the outdated stack and redraws it.",
+          "link": "E-naor-05"
+        },
+        {
+          "x": 83,
+          "y": 32,
+          "title": "Complexity, resolved",
+          "text": "An intricate form that reads as one clear shape. Naor’s Dieter Rams point, made visible.",
+          "link": "E-naor-04"
+        },
+        {
+          "x": 90,
+          "y": 87,
+          "title": "A system with rules",
+          "text": "Geometry others can build to. The visual root of a standard.",
+          "link": "I-c3"
+        }
+      ],
+      "history": [
+        {
+          "version": "0.6",
+          "line": "Every plane. One design.",
+          "reason": "Lines rewritten to carry ambition and match each archetype’s promise. Not final copy."
+        }
+      ],
+      "promise": {
+        "customer": "Your data center, designed as one whole and built for what AI will become.",
+        "ambition": "Rethink how intelligence is built, from first principles."
+      },
+      "lineOptions": [
+        "Rethinking how intelligence is built.",
+        "Designed for what AI will become.",
+        "The blueprint for the intelligence era."
+      ],
+      "lineStatus": "draft, not final copy",
+      "enables": "Intelligence built right, from the first principle to the last plane."
+    },
+    {
+      "id": "T2",
+      "name": "The Catalyst",
+      "archetype": "The enabler as the small, precise trigger for big change, where one trusted layer sets off a transformation across the AI economy.",
+      "direction": "Connected systems",
+      "idea": "A data center behaves like a living organism. 12 Planes is its immune system: it understands every part and notices the moment something is off.",
+      "visualLanguage": [
+        "Adaptive systems",
+        "Organic, growing visuals"
+      ],
+      "evidence": [
+        "E-naor-08"
+      ],
+      "expresses": [
+        "P2",
+        "P3"
+      ],
+      "status": "draft",
+      "slides": [
+        "84:1850",
+        "94:303",
+        "94:308",
+        "94:355",
+        "94:422",
+        "94:362",
+        "94:383"
+      ],
+      "image": "img/catalyst.jpg",
+      "role": "12 Planes is the one trusted layer that keeps the whole system alive, and makes it better.",
+      "line": "Where the next leap in AI begins.",
+      "answers": [
+        {
+          "job": "J1",
+          "strength": "strong",
+          "how": "An immune system understands every part of the body and how it acts. That is the whole data center, made legible."
+        },
+        {
+          "job": "J2",
+          "strength": "partial",
+          "how": "Protective and trustworthy, but it works out of sight. It needs a way to show its proof."
+        },
+        {
+          "job": "J3",
+          "strength": "partial",
+          "how": "It defines what a healthy whole looks like, a reference others can check against. It shapes the standard through the system rather than declaring it."
+        },
+        {
+          "job": "J4",
+          "strength": "strong",
+          "how": "An immune system protects without fear. It is what lets the body go further."
+        },
+        {
+          "job": "J5",
+          "strength": "strong",
+          "how": "Anyone grasps an immune system in a second. The most human metaphor of the three."
+        },
+        {
+          "job": "J6",
+          "strength": "strong",
+          "how": "It learns, adapts and grows stronger. Security first, then operations, then autonomy, without changing shape."
+        },
+        {
+          "job": "J7",
+          "strength": "partial",
+          "how": "Organic imagery feels alive, but less obviously like a leap in technology."
+        }
+      ],
+      "strongest": "The best answer to continuous improvement and to replacing fear with confidence. Explains the product better than any other territory.",
+      "risk": "Soft for a standard-setter, and close to biotech. The archetype (a trigger for big change) and the moodboard (an immune system) also tell two different stories.",
+      "hotspots": [
+        {
+          "x": 49,
+          "y": 48,
+          "title": "One trusted core",
+          "text": "A single layer at the centre that senses every part of the system.",
+          "link": "E-naor-08"
+        },
+        {
+          "x": 26,
+          "y": 18,
+          "title": "Everything is connected",
+          "text": "One degraded chiller or one USB stick spreads through the whole body until a customer goes down.",
+          "link": "I-m1"
+        },
+        {
+          "x": 82,
+          "y": 37,
+          "title": "It grows at the edges",
+          "text": "Security first, then operations, then autonomy. The organism gets stronger as it grows.",
+          "link": "I-c1"
+        },
+        {
+          "x": 50,
+          "y": 76,
+          "title": "Alive, not alarmed",
+          "text": "Calm, symmetrical, natural. Protection without the fear narrative Naor hates.",
+          "link": "I-c2"
+        }
+      ],
+      "history": [
+        {
+          "version": "0.6",
+          "line": "Infrastructure that learns.",
+          "reason": "Lines rewritten to carry ambition and match each archetype’s promise. Not final copy."
+        }
+      ],
+      "promise": {
+        "customer": "One trusted layer that makes your whole operation stronger every day.",
+        "ambition": "Set off the transformation that unlocks the AI economy."
+      },
+      "lineOptions": [
+        "Where the next leap in AI begins.",
+        "One layer that changes everything.",
+        "Stronger every day, so AI can do more."
+      ],
+      "lineStatus": "draft, not final copy",
+      "enables": "AI infrastructure that gets stronger every day, and sets off what comes next."
+    },
+    {
+      "id": "T3",
+      "name": "The Foundation",
+      "archetype": "The enabler as the ground a new industry is built on. Not the plumbing underneath, but the foundation that lets AI reach its full potential.",
+      "direction": "A new standard",
+      "idea": "Every era of technology needed a foundation before it could take off. 12 Planes is laying the foundation for a new age of AI: an industry that does not exist yet, and a new relationship between people and AI built on trust. Built so intelligence can go further.",
+      "visualLanguage": [
+        "Control room",
+        "Tactile controls",
+        "Soft skeuomorphism",
+        "Strict Swiss grid",
+        "Limited colours"
+      ],
+      "evidence": [
+        "E-naor-06"
+      ],
+      "expresses": [
+        "P1",
+        "P4",
+        "P5"
+      ],
+      "status": "draft",
+      "slides": [
+        "84:1833",
+        "96:83",
+        "96:88",
+        "96:139",
+        "96:261",
+        "96:148",
+        "96:236"
+      ],
+      "image": "img/foundation.jpg",
+      "role": "12 Planes establishes the industry a new age of AI will stand on.",
+      "line": "A new age for AI.",
+      "answers": [
+        {
+          "job": "J1",
+          "strength": "strong",
+          "how": "It speaks for the whole by being the ground the whole stands on. One foundation under every plane, so the data center reads as one thing, not a set of parts.",
+          "history": [
+            {
+              "version": "1.5",
+              "strength": "partial",
+              "how": "It speaks for the whole by speaking above the parts. Less about how the planes connect, more about what they make possible.",
+              "reason": "Rated strong at the owner’s request."
+            }
+          ]
+        },
+        {
+          "job": "J2",
+          "strength": "strong",
+          "how": "Foundations are trusted because they hold. Proof, like every extra nine, becomes evidence of an ambition, not a feature."
+        },
+        {
+          "job": "J3",
+          "strength": "strong",
+          "how": "The one who lays the foundation sets the standard everyone builds on. The closest fit to Lior’s stamp of approval."
+        },
+        {
+          "job": "J4",
+          "strength": "strong",
+          "how": "Confidence is the point of a foundation. It is what lets everything on top go further, faster."
+        },
+        {
+          "job": "J5",
+          "strength": "strong",
+          "how": "One big idea anyone understands: before AI can reach its full potential, it needs a foundation."
+        },
+        {
+          "job": "J6",
+          "strength": "strong",
+          "how": "The foundation stays, and what is built on it grows. Security, then operations, then autonomy are floors on the same ground."
+        },
+        {
+          "job": "J7",
+          "strength": "strong",
+          "how": "Establishing an industry is the opposite of upgrading one. It speaks to the era, not the equipment."
+        }
+      ],
+      "strongest": "The biggest voice of the three. It speaks less to how 12 Planes works and more to why it exists: to establish an industry and change how we relate to AI, so it can reach its full potential.",
+      "risk": "Ambition without proof can sound like a slogan, so it needs the nines and the work to back it. The current moodboard still leans functional and retro, with a control-room look Dragos already uses. It has to move towards the scale of the ambition.",
+      "hotspots": [
+        {
+          "x": 17,
+          "y": 66,
+          "title": "Where an era begins",
+          "text": "Every leap in technology started in rooms like this. The foundation comes before the breakthrough.",
+          "link": "E-naor-05"
+        },
+        {
+          "x": 83,
+          "y": 55,
+          "title": "Proof of the ambition",
+          "text": "Every extra nine is evidence that the foundation holds. Proof in service of the mission, not the feature list.",
+          "link": "E-naor-06"
+        },
+        {
+          "x": 50,
+          "y": 24,
+          "title": "Making the abstract human",
+          "text": "Something you can almost touch. A new relationship with AI that people can grasp and trust.",
+          "link": "I-i3"
+        },
+        {
+          "x": 54,
+          "y": 49,
+          "title": "Progressive, humanistic, refined",
+          "text": "The voice of a company founding an industry: calm, forward and certain.",
+          "link": "I-c2"
+        },
+        {
+          "x": 14,
+          "y": 22,
+          "title": "One signal, set by us",
+          "text": "Intentional colour as a mark of the standard. The point everyone else measures against.",
+          "link": "I-c3"
+        }
+      ],
+      "history": [
+        {
+          "version": "0.5",
+          "reason": "Recalibrated: from functional uptime and control room to the ambition of establishing an industry.",
+          "archetype": "The enabler as the ground everything stands on, invisible yet essential, carrying the weight of everything built on top.",
+          "idea": "Like a control centre, 12 Planes brings everything together in one calm overview and sets a new standard for what good looks like. Every extra nine counts.",
+          "role": "12 Planes is the ground everything in AI stands on, measured to the last nine.",
+          "line": "Every nine counts.",
+          "answers": [
+            {
+              "job": "J1",
+              "strength": "partial",
+              "how": "One calm overview, but it shows the state of things more than the structure of the whole."
+            },
+            {
+              "job": "J2",
+              "strength": "strong",
+              "how": "Proof made visible. Every extra nine of uptime is a public, measurable promise."
+            },
+            {
+              "job": "J3",
+              "strength": "strong",
+              "how": "A new standard for what good looks like. The closest fit to Lior’s stamp of approval."
+            },
+            {
+              "job": "J4",
+              "strength": "strong",
+              "how": "Calm panels, precise dials, nothing that does not need to be there."
+            },
+            {
+              "job": "J5",
+              "strength": "partial",
+              "how": "Clear and tactile, but a control room is many instruments, not one idea."
+            },
+            {
+              "job": "J6",
+              "strength": "weak",
+              "how": "A foundation is poured once. It struggles to say continuous improvement."
+            },
+            {
+              "job": "J7",
+              "strength": "weak",
+              "how": "Soft skeuomorphism and the control room look back, not forward. Dragos already owns the control-room look in security."
+            }
+          ],
+          "strongest": "The most credible territory. Turns proof and uptime into the brand, and makes 12 Planes feel like a partner you can trust.",
+          "risk": "The least ambitious. “Invisible yet essential” undersells a company that wants to lead a category, and the retro look fights “into the modern era and beyond”.",
+          "hotspots": [
+            {
+              "x": 17,
+              "y": 66,
+              "title": "The control room",
+              "text": "Everything in one calm overview. Careful: Dragos already uses this world.",
+              "link": "E-web-04"
+            },
+            {
+              "x": 83,
+              "y": 55,
+              "title": "Every extra nine",
+              "text": "Uptime made visible and measurable. Proof as the brand.",
+              "link": "E-naor-06"
+            },
+            {
+              "x": 50,
+              "y": 24,
+              "title": "Something to touch",
+              "text": "Tactile controls give a very abstract world something physical.",
+              "link": "I-i3"
+            },
+            {
+              "x": 14,
+              "y": 22,
+              "title": "One signal among calm",
+              "text": "Intentional colour. Attention only where it is needed, never alarm.",
+              "link": "I-c2"
+            },
+            {
+              "x": 54,
+              "y": 49,
+              "title": "Progressive, humanistic, refined",
+              "text": "A tone of voice that is calm and forward, not loud.",
+              "link": "I-c2"
+            }
+          ],
+          "expresses": [
+            "P1",
+            "P3",
+            "P5"
+          ]
+        },
+        {
+          "version": "0.6",
+          "line": "The foundation of the intelligence age.",
+          "reason": "Lines rewritten to carry ambition and match each archetype’s promise. Not final copy."
+        },
+        {
+          "version": "0.7",
+          "idea": "Every era of technology needed a foundation before it could take off. 12 Planes is establishing the foundation of the intelligence age: an industry that does not exist yet, and a new relationship between people and AI built on trust.",
+          "role": "12 Planes establishes the industry the intelligence age will stand on.",
+          "reason": "Aligned with the lead line \"A new age for AI\"."
+        }
+      ],
+      "promise": {
+        "customer": "Ground you can build anything on, so AI reaches its full potential.",
+        "ambition": "Establish the industry a new age of AI stands on."
+      },
+      "supportingLine": "Built so intelligence can go further.",
+      "lineOptions": [
+        "A new age for AI.",
+        "Built so intelligence can go further.",
+        "Before AI can change everything, it needs ground to stand on.",
+        "Before AI can change everything, it has to be trusted."
+      ],
+      "lineStatus": "draft, not final copy",
+      "enables": "A new industry, built so AI can reach its full potential."
+    },
+    {
+      "id": "T4",
+      "name": "The Pioneer",
+      "archetype": "The enabler as an explorer of new frontiers, where trusted infrastructure lets intelligence reach places it has never been.",
+      "direction": null,
+      "idea": null,
+      "visualLanguage": [],
+      "evidence": [],
+      "expresses": [],
+      "status": "parked",
+      "slides": [
+        "84:1858"
+      ],
+      "note": "Parked: least compelling in storytelling and visual identity potential."
+    }
+  ],
+  "sources": [
+    {
+      "id": "S-ilia",
+      "type": "interview",
+      "title": "Ilia Shnaidman, Co-founder and CEO",
+      "date": "2026-11-11",
+      "context": "Kickoff"
+    },
+    {
+      "id": "S-lior",
+      "type": "interview",
+      "title": "Lior Susan, Co-founder and investor, Eclipse",
+      "date": "2026-11-12"
+    },
+    {
+      "id": "S-naor",
+      "type": "interview",
+      "title": "Naor Penso, Co-founder and CTO",
+      "date": "2026-11-13"
+    },
+    {
+      "id": "S-desk",
+      "type": "desk",
+      "title": "Desk research and 12 Planes research thoughts (WIP)",
+      "date": "2026-11"
+    },
+    {
+      "id": "S-audit",
+      "type": "audit",
+      "title": "Competitor and category audit, websites as of November 2026",
+      "date": "2026-11"
+    },
+    {
+      "id": "S-fortune-1119",
+      "type": "news",
+      "publisher": "Fortune",
+      "title": "Microsoft, FAA, Chase, and Apple outages drove 6.4 million U.S. Downdetector reports in one week",
+      "date": "2026-11-19",
+      "url": "https://fortune.com/2026/11/19/outlook-faa-chase-crashed-down-detector-outages-ai-agents-hack/",
+      "tier": "tier1",
+      "checked": "Found via search, read in summary"
+    },
+    {
+      "id": "S-faa-1115",
+      "type": "official",
+      "publisher": "FAA",
+      "title": "Nationwide Ground Stop: Questions and Answers",
+      "date": "2026-11-15",
+      "url": "https://www.faa.gov/newsroom/nationwide-ground-stop-questions-and-answers",
+      "tier": "primary",
+      "checked": "Found via search, read in summary"
+    },
+    {
+      "id": "S-crs-1118",
+      "type": "official",
+      "publisher": "Congressional Research Service",
+      "title": "Nationwide Aircraft Ground Stop Raises Concerns over Aviation System Modernization (IN12756)",
+      "date": "2026-11-18",
+      "url": "https://www.everycrsreport.com/reports/IN12756.html",
+      "tier": "primary",
+      "checked": "Found via search, read in summary"
+    },
+    {
+      "id": "S-msft-pir",
+      "type": "news",
+      "publisher": "ABC7 (AP) on Microsoft preliminary post-incident report",
+      "title": "Microsoft identifies issues leading to global Outlook outage",
+      "date": "2026-11-16",
+      "url": "https://abc7news.com/story/microsoft-identifies-issues-leading-global-outlook-outage/20044647/",
+      "tier": "tier1",
+      "checked": "Found via search, read in summary"
+    },
+    {
+      "id": "S-gallup-0526",
+      "type": "research",
+      "publisher": "Gallup",
+      "title": "Americans Oppose AI Data Centers in Their Area",
+      "date": "2026-05",
+      "url": "https://news.gallup.com/poll/709772/americans-oppose-data-centers-area.aspx",
+      "tier": "primary",
+      "checked": "Found via search, read in summary"
+    },
+    {
+      "id": "S-wapo-1104",
+      "type": "news",
+      "publisher": "The Washington Post",
+      "title": "A nationwide backlash against data centers erupts at the polls",
+      "date": "2026-11-04",
+      "url": "https://www.washingtonpost.com/technology/2026/11/04/voters-pass-over-20-ballot-measures-ban-or-restrict-data-centers/",
+      "tier": "tier1",
+      "checked": "Found via search, read in summary"
+    },
+    {
+      "id": "S-npr-0921",
+      "type": "news",
+      "publisher": "NPR / PBS News / Marist",
+      "title": "The data center backlash is reshaping American politics",
+      "date": "2026-09-21",
+      "url": "https://www.npr.org/2026/09/21/nx-s1-5927288/data-center-election-voters-ai",
+      "tier": "tier1",
+      "checked": "Found via search, read in summary"
+    },
+    {
+      "id": "S-apollo-0626",
+      "type": "research",
+      "publisher": "Apollo Global Management",
+      "title": "The Growing Compute Shortage",
+      "date": "2026-06",
+      "url": "https://www.apollo.com/wealth/insights-news/insights/2026/06/growing-compute-shortage",
+      "tier": "tier1",
+      "checked": "Found via search, read in summary"
+    },
+    {
+      "id": "S-cnas",
+      "type": "research",
+      "publisher": "CNAS",
+      "title": "American AI Companies Can't Get Enough Chips",
+      "date": "2026",
+      "url": "https://www.cnas.org/publications/reports/american-ai-companies-cant-get-enough-chips",
+      "tier": "tier1",
+      "checked": "Found via search, read in summary"
+    },
+    {
+      "id": "S-bs-1013",
+      "type": "news",
+      "publisher": "Business Standard",
+      "title": "Data centre demand to outstrip supply as AI usage grows, say experts",
+      "date": "2026-10-13",
+      "url": "https://www.business-standard.com/amp/technology/tech-news/data-centre-demand-to-outstrip-supply-as-ai-usage-grows-say-experts-126101301194_1.html",
+      "tier": "trade",
+      "checked": "Found via search, read in summary"
+    },
+    {
+      "id": "S-cnbc-0712",
+      "type": "news",
+      "publisher": "CNBC",
+      "title": "AI executives say demand \"almost unlimited\" amid stock volatility",
+      "date": "2026-07-12",
+      "url": "https://www.cnbc.com/2026/07/12/ai-demand-chips-data-centers-stock-volatility.html",
+      "tier": "tier1",
+      "checked": "Found via search, read in summary"
+    },
+    {
+      "id": "S-gw-cost",
+      "type": "news",
+      "publisher": "Investing.com",
+      "title": "How much does a GW of data center capacity actually cost",
+      "date": "2026",
+      "url": "https://uk.investing.com/news/stock-market-news/how-much-does-a-gw-of-data-center-capacity-actually-cost-4329740",
+      "tier": "trade",
+      "checked": "Found via search, read in summary"
+    },
+    {
+      "id": "S-siliconangle-irr",
+      "type": "news",
+      "publisher": "SiliconANGLE",
+      "title": "Irregular raises $80M to set AI security standards for frontier models",
+      "date": "2025-09-17",
+      "url": "https://siliconangle.com/2025/09/17/irregular-raises-80m-set-ai-security-standards-frontier-models/",
+      "tier": "trade",
+      "checked": "Found via search, read in summary"
+    },
+    {
+      "id": "S-owasp-neo",
+      "type": "official",
+      "publisher": "OWASP",
+      "title": "Top 10 Neocloud & AI Data Center Security Risks",
+      "date": "2026-07",
+      "url": "https://owasp.org/www-project-top-10-neocloud-and-ai-data-center-security-risks/",
+      "tier": "primary",
+      "checked": "Found via search, read in summary"
+    },
+    {
+      "id": "S-secweek-lava",
+      "type": "news",
+      "publisher": "SecurityWeek",
+      "title": "AI data centers are being built faster than they can be secured",
+      "date": "2026",
+      "url": "https://www.securityweek.com/ai-data-centers-are-being-built-faster-than-they-can-be-secured/",
+      "tier": "trade",
+      "checked": "Found via search, read in summary"
+    },
+    {
+      "id": "S-founders",
+      "type": "field",
+      "publisher": "Naor Penso and Lior Susan",
+      "title": "Founder and investor field view from building and funding AI infrastructure",
+      "date": "2026-11",
+      "url": null,
+      "tier": "field",
+      "checked": "Found via search, read in summary"
+    },
+    {
+      "id": "S-p99conf",
+      "type": "news",
+      "publisher": "ScyllaDB / The New Stack",
+      "title": "P99 CONF, the conference for low-latency engineering (since 2021)",
+      "date": "2025",
+      "url": "https://thenewstack.io/p99-conf-sharpening-our-axes-to-battle-latency-misery/",
+      "tier": "trade",
+      "checked": "Found via search, read in summary"
+    },
+    {
+      "id": "S-ha",
+      "type": "research",
+      "publisher": "Better Stack",
+      "title": "Availability table (90% to 99.999% uptime)",
+      "date": "2026",
+      "url": "https://betterstack.com/community/guides/incident-management/availability-table",
+      "tier": "trade",
+      "checked": "Found via search, read in summary"
+    },
+    {
+      "id": "S-narr",
+      "type": "internal",
+      "publisher": "Kontrapunkt",
+      "title": "Kontrapunkt narrative and brand core work (WIP)",
+      "date": "2026-11",
+      "tier": "primary",
+      "checked": "Read in Figma"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "E-ilia-01",
+      "source": "S-ilia",
+      "type": "observation",
+      "text": "Lead with security at launch, so the market is not confused.",
+      "slide": "51:235"
+    },
+    {
+      "id": "E-ilia-02",
+      "source": "S-ilia",
+      "type": "quote",
+      "text": "The vision is multi-staged and we don't want to share it yet with the world.",
+      "slide": "51:235"
+    },
+    {
+      "id": "E-ilia-03",
+      "source": "S-ilia",
+      "type": "quote",
+      "text": "I don't think we want to share as a company yet that we are more than a security company.",
+      "slide": "86:1991"
+    },
+    {
+      "id": "E-ilia-04",
+      "source": "S-ilia",
+      "type": "quote",
+      "text": "That's what SpaceX is doing.",
+      "context": "SpaceX as the model: a big mission, with revenue from the first phase.",
+      "slide": "51:235"
+    },
+    {
+      "id": "E-ilia-05",
+      "source": "S-ilia",
+      "type": "observation",
+      "text": "Calm and Scandinavian, never cartoonish or loud.",
+      "slide": "51:235"
+    },
+    {
+      "id": "E-ilia-06",
+      "source": "S-ilia",
+      "type": "quote",
+      "text": "We are a complex company.",
+      "slide": "51:235"
+    },
+    {
+      "id": "E-lior-01",
+      "source": "S-lior",
+      "type": "quote",
+      "text": "We want to be a standard.",
+      "slide": "51:261"
+    },
+    {
+      "id": "E-lior-02",
+      "source": "S-lior",
+      "type": "observation",
+      "text": "A stamp of approval, like the FDA. Thought leadership through white papers and experts.",
+      "slide": "51:261"
+    },
+    {
+      "id": "E-lior-03",
+      "source": "S-lior",
+      "type": "quote",
+      "text": "The best place to start, of course, is where the token is being produced.",
+      "slide": "51:261"
+    },
+    {
+      "id": "E-lior-04",
+      "source": "S-lior",
+      "type": "quote",
+      "text": "It cannot feel like another cyber company.",
+      "slide": "51:261"
+    },
+    {
+      "id": "E-lior-05",
+      "source": "S-lior",
+      "type": "quote",
+      "text": "Do not think about it as a cyber, do not think about it as a security, do not think about it as an AI. It's all of those things combined.",
+      "slide": "86:1991"
+    },
+    {
+      "id": "E-naor-01",
+      "source": "S-naor",
+      "type": "observation",
+      "text": "Neoclouds first, hyperscalers later.",
+      "slide": "51:249"
+    },
+    {
+      "id": "E-naor-02",
+      "source": "S-naor",
+      "type": "quote",
+      "text": "Security is practically the brakes.",
+      "slide": "51:249"
+    },
+    {
+      "id": "E-naor-03",
+      "source": "S-naor",
+      "type": "quote",
+      "text": "The fear factor in security is the most prominent narrative by far. I hate it.",
+      "slide": "51:249"
+    },
+    {
+      "id": "E-naor-04",
+      "source": "S-naor",
+      "type": "quote",
+      "text": "He was able to take a very complex thing and simplify it.",
+      "context": "On Dieter Rams. Make enormous complexity feel simple.",
+      "slide": "51:249"
+    },
+    {
+      "id": "E-naor-05",
+      "source": "S-naor",
+      "type": "quote",
+      "text": "The way that we're building towards AI cannot be in a way that was conceived 30 years ago.",
+      "slide": "84:1127"
+    },
+    {
+      "id": "E-naor-06",
+      "source": "S-naor",
+      "type": "quote",
+      "text": "You measure data center uptime in the amount of nines: 99%, 99.9%, 99.99%. Every extra nine changes the entire spectrum of what it means to be down.",
+      "slide": "96:83"
+    },
+    {
+      "id": "E-naor-07",
+      "source": "S-naor",
+      "type": "quote",
+      "text": "12 Planes is in essence the manifestation of the layers of complexity that you have, from the dirt to the tokens.",
+      "slide": "94:71"
+    },
+    {
+      "id": "E-naor-08",
+      "source": "S-naor",
+      "type": "quote",
+      "text": "If it's a living organism, security is essentially your immune system. And in order for an immune system to be functional, it needs to understand every single part of the body and how it acts.",
+      "slide": "94:303"
+    },
+    {
+      "id": "E-desk-01",
+      "source": "S-desk",
+      "type": "observation",
+      "text": "Data centers, the origin of the token, are overlooked, managed and operated with aged technologies. Each slice of the value chain has players, but the opportunity lies in integrating the full stack.",
+      "slide": "84:1094"
+    },
+    {
+      "id": "E-desk-02",
+      "source": "S-desk",
+      "type": "stat",
+      "text": "Demand for AI compute outstrips supply, by up to three to one. Compute goes faster than it can be understood and secured.",
+      "slide": "84:1099",
+      "needsSource": false,
+      "sourcedBy": [
+        "E-field-01",
+        "E-ext-10",
+        "E-ext-08",
+        "E-ext-09",
+        "E-ext-11"
+      ],
+      "history": [
+        {
+          "text": "Demand for compute outstrips supply by two to three times. Compute goes faster than it can be understood and secured.",
+          "version": "0.2",
+          "reason": "Figure corrected to match sources."
+        }
+      ]
+    },
+    {
+      "id": "E-desk-03",
+      "source": "S-desk",
+      "type": "stat",
+      "text": "Gigawatt AI sites cost roughly $35 to $60 billion each, with security a minor piece of the budget.",
+      "slide": "84:1118",
+      "needsSource": false,
+      "sourcedBy": [
+        "E-ext-12",
+        "E-field-02"
+      ],
+      "history": [
+        {
+          "text": "Neoclouds are building gigawatt sites at around $50B each over the next three years, with security investment a minor piece.",
+          "version": "0.2",
+          "reason": "Figure corrected to match sources."
+        }
+      ]
+    },
+    {
+      "id": "E-desk-04",
+      "source": "S-desk",
+      "type": "observation",
+      "text": "November outages at Microsoft, the FAA and Chase showed infrastructure nobody fully understands.",
+      "slide": "84:1482",
+      "needsSource": false,
+      "sourcedBy": [
+        "E-ext-01",
+        "E-ext-02",
+        "E-ext-03",
+        "E-ext-04"
+      ]
+    },
+    {
+      "id": "E-desk-05",
+      "source": "S-desk",
+      "type": "observation",
+      "text": "Data centers have become the visible face of the AI backlash.",
+      "slide": "84:1482",
+      "needsSource": false,
+      "sourcedBy": [
+        "E-ext-05",
+        "E-ext-06",
+        "E-ext-07"
+      ]
+    },
+    {
+      "id": "E-desk-06",
+      "source": "S-desk",
+      "type": "observation",
+      "text": "Irregular sets the standard for models (with Anthropic). Lava publishes top-10 risks for neoclouds.",
+      "slide": "84:1579",
+      "needsSource": false,
+      "sourcedBy": [
+        "E-ext-13",
+        "E-ext-14"
+      ]
+    },
+    {
+      "id": "E-web-01",
+      "source": "S-audit",
+      "type": "observation",
+      "brand": "Nozomi Networks",
+      "text": "Forrester Names Nozomi Networks a Leader. Authority through others.",
+      "slide": "84:1247",
+      "claim": "Forrester names Nozomi Networks a Leader"
+    },
+    {
+      "id": "E-web-02",
+      "source": "S-audit",
+      "type": "observation",
+      "brand": "Claroty",
+      "text": "Recognized as a Leader and a Customers' Choice by Gartner. Authority through others.",
+      "slide": "84:1247",
+      "claim": "Recognized as a Leader and a Customers’ Choice by Gartner"
+    },
+    {
+      "id": "E-web-03",
+      "source": "S-audit",
+      "type": "observation",
+      "brand": "Wiz",
+      "text": "Trusted by more than 65% of Fortune 100 companies. Light and playful look, but authority still comes from logos and customer numbers.",
+      "slide": "84:1312",
+      "url": "https://wiz.io",
+      "claim": "Trusted by more than 65% of Fortune 100 companies"
+    },
+    {
+      "id": "E-web-04",
+      "source": "S-audit",
+      "type": "observation",
+      "brand": "Dragos",
+      "text": "The Global Leader in xOT Cybersecurity. The only security brand with a mission larger than its product, but the look belongs to the control room.",
+      "slide": "84:1276",
+      "url": "https://dragos.com",
+      "claim": "The Global Leader in xOT Cybersecurity"
+    },
+    {
+      "id": "E-web-05",
+      "source": "S-audit",
+      "type": "observation",
+      "brand": "Palo Alto Networks",
+      "text": "Ask. Remediate. Optimize. The incumbent everyone is measured against. Scale is the message, little room for a point of view.",
+      "slide": "84:1293",
+      "url": "https://paloaltonetworks.com",
+      "claim": "Ask. Remediate. Optimize."
+    },
+    {
+      "id": "E-web-06",
+      "source": "S-audit",
+      "type": "observation",
+      "brand": "CrowdStrike",
+      "text": "One unified platform to secure the agentic enterprise. Dark, urgent, threat imagery. The verb is 'stop breaches'.",
+      "slide": "84:1331",
+      "url": "https://crowdstrike.com",
+      "claim": "One unified platform to secure the agentic enterprise"
+    },
+    {
+      "id": "E-web-07",
+      "source": "S-audit",
+      "type": "observation",
+      "text": "Fear has moved from the copy into the names.",
+      "slide": "84:1247"
+    },
+    {
+      "id": "E-web-08",
+      "source": "S-audit",
+      "type": "observation",
+      "text": "'Leader' and 'AI factory' belong to others.",
+      "slide": "84:1247"
+    },
+    {
+      "id": "E-web-09",
+      "source": "S-audit",
+      "type": "observation",
+      "brand": "Vertiv",
+      "text": "Solving the power and cooling complexities of the AI revolution. Sells the hardware 12 Planes will watch over. As much partner as neighbour.",
+      "slide": "84:1386",
+      "url": "https://vertiv.com",
+      "claim": "Solving the power and cooling complexities of the AI revolution"
+    },
+    {
+      "id": "E-web-10",
+      "source": "S-audit",
+      "type": "observation",
+      "brand": "Schneider Electric",
+      "text": "For data centers and AI factories. Sells the power. Products, not a point of view.",
+      "slide": "84:1345",
+      "claim": "For data centers and AI factories"
+    },
+    {
+      "id": "E-web-11",
+      "source": "S-audit",
+      "type": "observation",
+      "brand": "Equinix",
+      "text": "The future doesn't need another cloud. It needs every cloud, connected. The closest neighbour with a real position.",
+      "slide": "84:1373",
+      "url": "https://equinix.com",
+      "claim": "The future doesn’t need another cloud. It needs every cloud, connected"
+    },
+    {
+      "id": "E-web-12",
+      "source": "S-audit",
+      "type": "observation",
+      "text": "Leadership claims here too: Vertiv is 'a global leader', too.",
+      "slide": "84:1345"
+    },
+    {
+      "id": "E-web-13",
+      "source": "S-audit",
+      "type": "observation",
+      "brand": "Palantir",
+      "text": "Foundational Software of Tomorrow. Delivered Today. Made software feel like infrastructure and named the category first.",
+      "slide": "84:1428",
+      "url": "https://palantir.com",
+      "claim": "Foundational Software of Tomorrow. Delivered Today."
+    },
+    {
+      "id": "E-web-14",
+      "source": "S-audit",
+      "type": "observation",
+      "brand": "SpaceX",
+      "text": "Enabling people to live on other planets. Made a launch company feel like the start of a civilisation, and funded the mission with revenue from the first phase.",
+      "slide": "84:1399",
+      "claim": "Enabling people to live on other planets",
+      "history": [
+        {
+          "version": "1.3",
+          "text": "Enabling people to live on other planets.",
+          "reason": "The deck’s SpaceX case was a copy of Palantir. Written out properly."
+        }
+      ],
+      "context": "From launch provider to the infrastructure for life on other planets. What 12 Planes can learn: a mission big enough to grow into, earned step by step. Ilia’s own model."
+    },
+    {
+      "id": "E-web-15",
+      "source": "S-audit",
+      "type": "observation",
+      "brand": "Tesla",
+      "text": "Building a World of Amazing Abundance.",
+      "slide": "84:1399",
+      "claim": "Building a World of Amazing Abundance"
+    },
+    {
+      "id": "E-web-16",
+      "source": "S-audit",
+      "type": "observation",
+      "brand": "Cursor",
+      "text": "Cursor is your coding agent for building ambitious software. Speaks to what people build, not the tool.",
+      "slide": "84:1463",
+      "url": "https://cursor.com",
+      "claim": "Your coding agent for building ambitious software"
+    },
+    {
+      "id": "E-web-18",
+      "source": "S-audit",
+      "type": "artifact",
+      "text": "Landscape: two industries, data security and AI, meet in the data center. Around 35 players mapped across 11 segments.",
+      "slide": "84:1154"
+    },
+    {
+      "id": "E-ext-01",
+      "source": "S-fortune-1119",
+      "type": "stat",
+      "text": "Outages at Microsoft, the FAA, Chase and Apple drove 6.4 million U.S. Downdetector reports in a single week in November."
+    },
+    {
+      "id": "E-ext-02",
+      "source": "S-faa-1115",
+      "type": "observation",
+      "text": "The FAA grounded every U.S. flight on 13 November after legacy equipment became unstable under a data flood. It found no sign of a cyberattack."
+    },
+    {
+      "id": "E-ext-03",
+      "source": "S-crs-1118",
+      "type": "observation",
+      "text": "Congress's research service flagged the 4 h 45 min ground stop as a warning about how far critical systems lag modernisation."
+    },
+    {
+      "id": "E-ext-04",
+      "source": "S-msft-pir",
+      "type": "observation",
+      "text": "Microsoft traced the 12 to 13 November Outlook outage to a latent defect introduced by a July update, compounded by failover traffic and reduced capacity."
+    },
+    {
+      "id": "E-ext-05",
+      "source": "S-gallup-0526",
+      "type": "stat",
+      "text": "Roughly seven in ten Americans oppose an AI data center in their area, 48% strongly, across every party group."
+    },
+    {
+      "id": "E-ext-06",
+      "source": "S-wapo-1104",
+      "type": "observation",
+      "text": "In November, voters passed more than 20 ballot measures banning or restricting data centers."
+    },
+    {
+      "id": "E-ext-07",
+      "source": "S-npr-0921",
+      "type": "stat",
+      "text": "58% of U.S. voters say new data centers from big tech will mostly harm the country. A quarter support them."
+    },
+    {
+      "id": "E-ext-08",
+      "source": "S-apollo-0626",
+      "type": "observation",
+      "text": "On-demand GPU capacity is effectively sold out, TSMC capacity is sold out, and power has become a critical bottleneck."
+    },
+    {
+      "id": "E-ext-09",
+      "source": "S-cnas",
+      "type": "observation",
+      "text": "AI chip production across logic, memory and packaging is the binding constraint on the compute build-out."
+    },
+    {
+      "id": "E-ext-10",
+      "source": "S-bs-1013",
+      "type": "stat",
+      "text": "Demand is outstripping available capacity by nearly three to one in key Tier-1 regions (HyperFrame Research)."
+    },
+    {
+      "id": "E-ext-11",
+      "source": "S-cnbc-0712",
+      "type": "observation",
+      "text": "AI executives describe compute demand as almost unlimited. AWS says it will not have enough capacity to meet 2026 demand."
+    },
+    {
+      "id": "E-ext-12",
+      "source": "S-gw-cost",
+      "type": "stat",
+      "text": "A gigawatt AI campus costs roughly $35 to $60 billion all in. Nvidia puts it near $60 billion, independent models nearer $38 billion."
+    },
+    {
+      "id": "E-ext-13",
+      "source": "S-siliconangle-irr",
+      "type": "observation",
+      "text": "Irregular raised $80M to set security standards for frontier models. Its SOLVE framework is used by Anthropic and the UK government."
+    },
+    {
+      "id": "E-ext-14",
+      "source": "S-owasp-neo",
+      "type": "observation",
+      "text": "Lava Security leads an OWASP Top 10 for neocloud and AI data center security risks, first published July 2026."
+    },
+    {
+      "id": "E-ext-15",
+      "source": "S-secweek-lava",
+      "type": "observation",
+      "text": "AI data centers are being built faster than they can be secured."
+    },
+    {
+      "id": "E-field-01",
+      "source": "S-founders",
+      "type": "observation",
+      "text": "From the field: compute demand runs at two to three times available supply, and the pressure to bring capacity online pushes security down the list.",
+      "confirm": "Confirm wording and permission to attribute with Naor and Lior"
+    },
+    {
+      "id": "E-field-02",
+      "source": "S-founders",
+      "type": "observation",
+      "text": "From the field: gigawatt sites are funded at tens of billions each, with security a minor line in those budgets.",
+      "confirm": "Confirm wording and permission to attribute with Naor and Lior"
+    },
+    {
+      "id": "E-ext-16",
+      "source": "S-p99conf",
+      "type": "observation",
+      "text": "P99 is the standard engineering term for 99th-percentile latency, and ScyllaDB has run P99 CONF for low-latency engineers since 2021."
+    },
+    {
+      "id": "E-ext-17",
+      "source": "S-ha",
+      "type": "stat",
+      "text": "99% uptime allows about 3.65 days of downtime a year. 99.9% about 8.8 hours, 99.99% about 53 minutes, 99.999% about 5 minutes."
+    },
+    {
+      "id": "E-deck-name",
+      "source": "S-audit",
+      "type": "artifact",
+      "text": "The Foundation territory explores .99, point99 and P99 as wordmarks, shown on a brushed-metal tile next to a 12 Planes website.",
+      "slide": "96:261"
+    },
+    {
+      "id": "E-narr-10",
+      "source": "S-narr",
+      "type": "artifact",
+      "text": "The product proposition, building compounding value: Protect, Perform, Progress."
+    }
+  ],
+  "gaps": [
+    {
+      "id": "G1",
+      "severity": "high",
+      "text": "Four market claims have no source in the deck: the November outages (Microsoft, FAA, Chase), data centers as the face of the AI backlash, the 2-3x compute gap, and the $50B gigawatt sites.",
+      "affects": [
+        "I-m1",
+        "I-m2",
+        "E-desk-02",
+        "E-desk-03",
+        "E-desk-04",
+        "E-desk-05"
+      ],
+      "status": "resolved",
+      "resolution": "Sourced in v0.3 with Gallup, Washington Post, NPR/Marist, FAA, CRS, Fortune, Apollo, CNAS and founder proof points."
+    },
+    {
+      "id": "G2",
+      "severity": "high",
+      "text": "'Accountability is the new test' rests on a single unsourced observation. Weakest insight in the argument.",
+      "affects": [
+        "I-m2"
+      ],
+      "status": "resolved",
+      "resolution": "Sourced in v0.3 with Gallup, Washington Post, NPR/Marist, FAA, CRS, Fortune, Apollo, CNAS and founder proof points."
+    },
+    {
+      "id": "G3",
+      "severity": "high",
+      "text": "The Pioneer has no content beyond a divider and an archetype line.",
+      "affects": [
+        "T4"
+      ],
+      "status": "resolved",
+      "resolution": "The Pioneer is parked (decision D2)."
+    },
+    {
+      "id": "G4",
+      "severity": "medium",
+      "text": "SpaceX slide body is a copy of the Palantir slide (title, from-to, quote and source).",
+      "affects": [
+        "E-web-14"
+      ],
+      "slide": "84:1444",
+      "status": "resolved",
+      "resolution": "SpaceX case written out in v1.4."
+    },
+    {
+      "id": "G5",
+      "severity": "medium",
+      "text": "Naor Penso is titled 'Founder & CEO' on four quote slides and 'Co-founder and CTO' on his interview slide. Ilia is the CEO.",
+      "slide": "84:1127",
+      "status": "resolved",
+      "resolution": "Naor is Co-founder and CTO throughout this map and Present."
+    },
+    {
+      "id": "G6",
+      "severity": "medium",
+      "text": "Positioning map coordinates are not grounded in any scoring. Fine for a sketch, but it carries the main claim ('the open space').",
+      "affects": [
+        "M1"
+      ],
+      "status": "open"
+    },
+    {
+      "id": "G7",
+      "severity": "low",
+      "text": "Territory numbering: Architect 01, Catalyst 02, Foundation 01, Pioneer 04. Section numbering skips 03.",
+      "slide": "84:1833",
+      "status": "resolved",
+      "resolution": "Territories are numbered 1 to 3 here, with The Pioneer parked."
+    },
+    {
+      "id": "G8",
+      "severity": "low",
+      "text": "Outset says two deep-dive interviews; the deck shows three.",
+      "slide": "51:154",
+      "status": "resolved",
+      "resolution": "Three interviews: Ilia (kickoff, 11 Nov), Lior (12 Nov), Naor (13 Nov)."
+    },
+    {
+      "id": "G9",
+      "severity": "low",
+      "text": "'Deep dive into The Enabler' introduces an archetype name used nowhere else.",
+      "slide": "84:1747",
+      "status": "resolved",
+      "resolution": "Explained in v1.4: all four archetypes are versions of The Enabler."
+    },
+    {
+      "id": "G10",
+      "severity": "low",
+      "text": "Timeline mismatch: next steps say 30 Nov workshop, overview timeline says 25 Nov for narrative v1 and Sprint 2 decision.",
+      "slide": "51:477",
+      "status": "resolved",
+      "resolution": "The workshop is 30 November, where the Sprint 2 focus is chosen. Brand narrative v1 follows mid-December."
+    },
+    {
+      "id": "G11",
+      "severity": "low",
+      "text": "Territories are not explicitly tied to the principles in the deck. The links in this file are our proposal.",
+      "affects": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "status": "resolved",
+      "resolution": "Territories now linked to the seven brand jobs and their insights (v0.5)."
+    },
+    {
+      "id": "G12",
+      "severity": "high",
+      "status": "resolved",
+      "text": "Lava's OWASP top 10 already names 'AI data center' risks. 'The data center is unclaimed' needs softening to 'nobody speaks for the whole', or it will be challenged.",
+      "affects": [
+        "I-m3",
+        "E-ext-14"
+      ],
+      "resolution": "Line softened in v0.4 to \"nobody yet speaks for the data center as a whole\"."
+    },
+    {
+      "id": "G13",
+      "severity": "medium",
+      "status": "open",
+      "text": "None of the November outages was in an AI data center or a cyberattack. Use them as proof of fragile, poorly understood infrastructure, not of a security problem.",
+      "affects": [
+        "I-m1",
+        "E-ext-01"
+      ]
+    },
+    {
+      "id": "G14",
+      "severity": "medium",
+      "status": "open",
+      "text": "Irregular is a strong reference but carries a recent unconfirmed report (ITPro) linking its test environment to AI agent incidents. Check before holding it up as the model.",
+      "affects": [
+        "E-ext-13"
+      ]
+    },
+    {
+      "id": "G15",
+      "severity": "medium",
+      "status": "open",
+      "text": "No published source puts compute demand at 2 to 3x supply overall. The external figure is 3:1 in key regions. Attribute the 2 to 3x to Naor and Lior, and confirm they are happy to be quoted.",
+      "affects": [
+        "E-desk-02",
+        "E-field-01"
+      ]
+    },
+    {
+      "id": "G16",
+      "severity": "low",
+      "status": "open",
+      "text": "Sources were found via search and read in summary. Open the Gallup, FAA, CRS and Fortune pages before anything is shown externally.",
+      "affects": [
+        "E-ext-01",
+        "E-ext-02",
+        "E-ext-03",
+        "E-ext-05"
+      ]
+    },
+    {
+      "id": "G17",
+      "severity": "medium",
+      "status": "open",
+      "text": "The Catalyst archetype (a small trigger for big change) and its moodboard (an immune system) tell different stories. Pick one before Sprint 2.",
+      "affects": [
+        "T2"
+      ]
+    },
+    {
+      "id": "G18",
+      "severity": "medium",
+      "status": "resolved",
+      "text": "The Foundation archetype (“invisible yet essential”) undersells the category-leading ambition in the new key question.",
+      "affects": [
+        "T3"
+      ],
+      "resolution": "Archetype rewritten in v0.6 around establishing an industry."
+    },
+    {
+      "id": "G19",
+      "severity": "low",
+      "status": "open",
+      "text": "Territory lines and job ratings are Kontrapunkt’s draft judgement. Pressure-test internally before the workshop.",
+      "affects": [
+        "T1",
+        "T2",
+        "T3"
+      ]
+    },
+    {
+      "id": "G20",
+      "severity": "high",
+      "status": "open",
+      "text": "The Foundation moodboard still speaks to function (control room, dials, soft skeuomorphism). Push it towards the scale of the ambition before the workshop, and away from the Dragos control-room look.",
+      "affects": [
+        "T3"
+      ]
+    },
+    {
+      "id": "G21",
+      "severity": "high",
+      "status": "open",
+      "text": "The narrative deck contains material from another client’s project (the product slide and a block of later slides). Remove it before the deck is shared with 12 Planes.",
+      "affects": []
+    }
+  ],
+  "openQuestions": [
+    {
+      "id": "OQ1",
+      "text": "Which territory, or combination, should Sprint 2 develop?",
+      "owner": "Client",
+      "status": "open",
+      "due": "Workshop 30 Nov"
+    },
+    {
+      "id": "OQ2",
+      "text": "How far can the brand hint at operations and autonomy while leading with security?",
+      "owner": "Client",
+      "status": "open"
+    },
+    {
+      "id": "OQ4",
+      "text": "Should 12 Planes rename to .99, or use .99 as the mark of the standard?",
+      "owner": "Client and Kontrapunkt",
+      "status": "open",
+      "due": "Workshop 30 Nov"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "D1",
+      "date": "2026-11-25",
+      "version": "0.2",
+      "text": "Key question reframed: from leading with security without looking like cyber, to starting and leading a new category.",
+      "by": "Kontrapunkt team",
+      "affects": [
+        "Q1",
+        "A1",
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D2",
+      "date": "2026-11-25",
+      "version": "0.3",
+      "text": "The Pioneer parked: least compelling in both storytelling and visual identity potential.",
+      "by": "Kontrapunkt team",
+      "affects": [
+        "T4"
+      ]
+    },
+    {
+      "id": "D3",
+      "date": "2026-11-25",
+      "version": "0.3",
+      "text": "Market claims sourced. Naor and Lior treated as proof points from their own industry work.",
+      "by": "Kontrapunkt team",
+      "affects": [
+        "I-m1",
+        "I-m2",
+        "I-m3"
+      ]
+    },
+    {
+      "id": "D4",
+      "date": "2026-11-25",
+      "version": "0.4",
+      "text": "\"The data center is unclaimed\" softened to \"nobody yet speaks for the whole\".",
+      "by": "Kontrapunkt team",
+      "affects": [
+        "I-m3"
+      ]
+    },
+    {
+      "id": "D5",
+      "date": "2026-11-25",
+      "version": "0.5",
+      "text": "Territories unfolded: each rated against seven brand jobs drawn from the insights, with moodboard annotations and a point of view.",
+      "by": "Kontrapunkt team",
+      "affects": [
+        "T1",
+        "T2",
+        "T3"
+      ]
+    },
+    {
+      "id": "D6",
+      "date": "2026-11-25",
+      "version": "0.6",
+      "text": "The Foundation becomes the lead territory, reframed from functional uptime to the ambition of establishing an industry. The Catalyst rated partial on setting the standard.",
+      "by": "Kontrapunkt team",
+      "affects": [
+        "T2",
+        "T3"
+      ]
+    },
+    {
+      "id": "D7",
+      "date": "2026-11-25",
+      "version": "0.7",
+      "text": "Each territory given a customer promise and ambitious first lines. Foundation lead line \"A new age for AI\", supported by \"Built so intelligence can go further\". All copy is draft.",
+      "by": "Kontrapunkt team",
+      "affects": [
+        "T1",
+        "T2",
+        "T3"
+      ]
+    },
+    {
+      "id": "D8",
+      "date": "2026-11-25",
+      "version": "0.8",
+      "text": "Lead lines adopted across map and Present: Architect \"Rethinking how intelligence is built\", Catalyst \"Where the next leap in AI begins\", Foundation \"A new age for AI\" with \"Built so intelligence can go further\". Draft copy.",
+      "by": "Kontrapunkt team",
+      "affects": [
+        "T1",
+        "T2",
+        "T3"
+      ]
+    },
+    {
+      "id": "D9",
+      "date": "2026-11-25",
+      "version": "0.9",
+      "text": "Name question opened: .99, point99 and P99 assessed against five naming criteria. Draft point of view: keep 12 Planes, test .99 as the mark of the standard.",
+      "by": "Kontrapunkt team",
+      "affects": [
+        "T3"
+      ]
+    },
+    {
+      "id": "D10",
+      "date": "2026-11-25",
+      "version": "1.0",
+      "text": "Name section in Present cut to one screen, reframed as: can we bring the scale of the ambition into every part of the brand, including the name? Options stay in the map.",
+      "by": "Kontrapunkt team",
+      "affects": [
+        "T3"
+      ]
+    },
+    {
+      "id": "D11",
+      "date": "2026-11-25",
+      "version": "1.1",
+      "text": "Archetype screens focused on one hero statement of what each archetype enables. Answers, promise and ambition move behind an unpack button.",
+      "by": "Kontrapunkt team",
+      "affects": [
+        "T1",
+        "T2",
+        "T3"
+      ]
+    },
+    {
+      "id": "D12",
+      "date": "2026-11-25",
+      "version": "1.2",
+      "text": "Product proposition (Protect, Perform, Progress) from the Narrative & Brand Core deck added and linked to the insights. Competitive landscape added with two lenses.",
+      "by": "Kontrapunkt team",
+      "affects": [
+        "A1"
+      ]
+    },
+    {
+      "id": "D13",
+      "date": "2026-11-25",
+      "version": "1.3",
+      "text": "Links and citations to the original Figma decks removed from the map and Present. Closing screen links to each territory chapter.",
+      "by": "Kontrapunkt team",
+      "affects": []
+    },
+    {
+      "id": "D14",
+      "date": "2026-11-26",
+      "version": "1.4",
+      "text": "Placeholder and duplicate content drafted (nine items), SpaceX case written, Naor’s title corrected, five deck gaps resolved. Map and Present are now live and jointly editable.",
+      "by": "Kontrapunkt team",
+      "affects": []
+    },
+    {
+      "id": "D15",
+      "date": "2026-11-26",
+      "version": "1.5",
+      "text": "Present slides on outages, backlash, borrowed authority and the parts of the data center merged into one overview of four figures: category, competitor, customer, culture.",
+      "by": "Kontrapunkt team",
+      "affects": [
+        "I-m1",
+        "I-m2",
+        "I-i1",
+        "I-i2"
+      ]
+    },
+    {
+      "id": "D16",
+      "date": "2026-11-26",
+      "version": "1.5",
+      "text": "The Foundation rated strong on making the whole data center legible.",
+      "by": "Kontrapunkt team",
+      "affects": [
+        "T3"
+      ]
+    },
+    {
+      "id": "D17",
+      "date": "2026-11-26",
+      "version": "1.5",
+      "text": "Roadmap slide (How the brand grows) left out of Present for now. Kept in the data so it can return.",
+      "by": "Kontrapunkt team",
+      "affects": [
+        "P5"
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-11-11",
+      "label": "Kickoff"
+    },
+    {
+      "date": "2026-11-12",
+      "label": "Interviews (Lior, Naor 13 Nov)"
+    },
+    {
+      "date": "2026-11-30",
+      "label": "Workshop: reactions to insights and early moodboards"
+    },
+    {
+      "date": "2026-12-15",
+      "label": "Sprint 1 debrief: brand narrative v1, focus for Sprint 2",
+      "approx": true
+    },
+    {
+      "date": "2026-12-21",
+      "label": "Holiday break until 3 January"
+    },
+    {
+      "date": "2027-01",
+      "label": "Sprint 2 and 3: platform, visual direction and prototype ahead of stealth exit"
+    }
+  ],
+  "slides": {
+    "1:152": {
+      "n": 1,
+      "label": "Kontrapunkt"
+    },
+    "1:164": {
+      "n": 2,
+      "label": "Contents"
+    },
+    "51:204": {
+      "n": 4,
+      "label": "01"
+    },
+    "51:154": {
+      "n": 5,
+      "label": "Check-ins"
+    },
+    "86:1991": {
+      "n": 6,
+      "label": "SUMMARY"
+    },
+    "51:209": {
+      "n": 7,
+      "label": "02"
+    },
+    "51:214": {
+      "n": 8,
+      "label": "Debrief"
+    },
+    "51:231": {
+      "n": 9,
+      "label": "Understanding 12 Planes"
+    },
+    "84:1094": {
+      "n": 10,
+      "label": "AI is at its beginning. Its potential still needs to be unlo"
+    },
+    "84:1099": {
+      "n": 11,
+      "label": "The problem"
+    },
+    "84:1118": {
+      "n": 12,
+      "label": "AI today Today's AI excels at intelligence and automation, b"
+    },
+    "84:1127": {
+      "n": 13,
+      "label": "Understanding 12 Planes"
+    },
+    "51:249": {
+      "n": 14,
+      "label": "INTERVIEW · 02 OF 03"
+    },
+    "51:235": {
+      "n": 15,
+      "label": "INTERVIEW · 01 OF 03"
+    },
+    "51:261": {
+      "n": 16,
+      "label": "INTERVIEW · 03 OF 03"
+    },
+    "51:273": {
+      "n": 17,
+      "label": "INTERVIEWS · SUMMARY"
+    },
+    "51:278": {
+      "n": 18,
+      "label": "Understanding competitors"
+    },
+    "84:1154": {
+      "n": 19,
+      "label": "THE LANDSCAPE"
+    },
+    "86:1967": {
+      "n": 20,
+      "label": "Data security (divider)"
+    },
+    "84:1247": {
+      "n": 21,
+      "label": "DATA SECURITY"
+    },
+    "84:1276": {
+      "n": 22,
+      "label": "DATA SECURITY · DRAGOS"
+    },
+    "84:1312": {
+      "n": 23,
+      "label": "DATA SECURITY · WIZ"
+    },
+    "84:1293": {
+      "n": 24,
+      "label": "DATA SECURITY · PALO ALTO NETWORKS"
+    },
+    "84:1331": {
+      "n": 25,
+      "label": "DATA SECURITY · CROWDSTRIKE"
+    },
+    "86:1975": {
+      "n": 26,
+      "label": "Data centers (divider)"
+    },
+    "84:1345": {
+      "n": 27,
+      "label": "DATA CENTERS"
+    },
+    "84:1373": {
+      "n": 28,
+      "label": "DATA CENTERS · EQUINIX"
+    },
+    "84:1386": {
+      "n": 29,
+      "label": "DATA CENTERS · VERTIV"
+    },
+    "86:1983": {
+      "n": 30,
+      "label": "AI / tech industry (divider)"
+    },
+    "84:1399": {
+      "n": 31,
+      "label": "AI AND TECH"
+    },
+    "84:1428": {
+      "n": 32,
+      "label": "AI AND TECH · PALANTIR"
+    },
+    "84:1444": {
+      "n": 33,
+      "label": "AI AND TECH · PALANTIR (sic)"
+    },
+    "84:1463": {
+      "n": 34,
+      "label": "AI AND TECH · CURSOR"
+    },
+    "84:1478": {
+      "n": 35,
+      "label": "Insights"
+    },
+    "84:1482": {
+      "n": 36,
+      "label": "SUMMARY"
+    },
+    "84:1510": {
+      "n": 37,
+      "label": "SUMMARY"
+    },
+    "84:1520": {
+      "n": 38,
+      "label": "SUMMARY"
+    },
+    "84:1579": {
+      "n": 39,
+      "label": "SUMMARY"
+    },
+    "51:395": {
+      "n": 40,
+      "label": "04"
+    },
+    "84:1767": {
+      "n": 41,
+      "label": "same 2x2 as #37 with territories plotted: The catalyst, The "
+    },
+    "84:1747": {
+      "n": 42,
+      "label": "Positioning archetypes"
+    },
+    "84:1842": {
+      "n": 43,
+      "label": "Territory 01"
+    },
+    "94:71": {
+      "n": 44,
+      "label": "\"12 Planes is in essence the manifestation of the layers of "
+    },
+    "94:76": {
+      "n": 45,
+      "label": "Direction 1 Layers"
+    },
+    "94:127": {
+      "n": 46,
+      "label": "(moodboard image)"
+    },
+    "94:182": {
+      "n": 47,
+      "label": "logo sketches 12 PLANES / 12Planes / 12PLANES"
+    },
+    "94:268": {
+      "n": 48,
+      "label": "application mockups (Conference 2027; plane labels: servers "
+    },
+    "84:1850": {
+      "n": 49,
+      "label": "Territory 02"
+    },
+    "94:303": {
+      "n": 50,
+      "label": "\"If it's a living organism, security is essentially your imm"
+    },
+    "94:308": {
+      "n": 51,
+      "label": "Moodboard 02 Connected Systems"
+    },
+    "84:1833": {
+      "n": 57,
+      "label": "Territory 01 (sic)"
+    },
+    "96:83": {
+      "n": 58,
+      "label": "\"You measure data center uptime in the amount of nines: 99%,"
+    },
+    "96:88": {
+      "n": 59,
+      "label": "Moodboard 01 A new standard"
+    },
+    "96:139": {
+      "n": 60,
+      "label": "taktitle"
+    },
+    "96:261": {
+      "n": 61,
+      "label": "wordmark sketches .99 / point99 / P99"
+    },
+    "96:148": {
+      "n": 62,
+      "label": "Tactile controls"
+    },
+    "96:236": {
+      "n": 63,
+      "label": "website mock: \"Cooming soon\" (typo), CPH 09:42:02, \"The firs"
+    },
+    "84:1858": {
+      "n": 64,
+      "label": "Territory 04"
+    },
+    "84:1922": {
+      "n": 65,
+      "label": "Contents"
+    },
+    "51:573": {
+      "n": 66,
+      "label": "05"
+    },
+    "51:477": {
+      "n": 67,
+      "label": "NEXT STEPS"
+    },
+    "1:233": {
+      "n": 68,
+      "label": "Suggested timeline overview Nov 2026-Feb 2027: Insights & on"
+    },
+    "2:793": {
+      "n": 69,
+      "label": "Thank you! contact slide"
+    },
+    "94:355": {
+      "n": 52,
+      "label": "Moodboard images"
+    },
+    "94:422": {
+      "n": 53,
+      "label": "Moodboard images"
+    },
+    "94:362": {
+      "n": 54,
+      "label": "Logo sketches"
+    },
+    "94:378": {
+      "n": 55,
+      "label": "Get in contact"
+    },
+    "94:383": {
+      "n": 56,
+      "label": "Wireframe"
+    }
+  },
+  "present": {
+    "title": "12 Planes · Sprint 1",
+    "note": "Presentation copy may be shorter than the map. Every screen points to a node in the map, so \"Why?\" always opens the full rationale.",
+    "screens": [
+      {
+        "id": "s1",
+        "kind": "cover",
+        "ref": "Q1",
+        "eyebrow": "Kontrapunkt for 12 Planes · Eclipse PortCo · 30 November 2026",
+        "tone": "dark"
+      },
+      {
+        "id": "s2",
+        "kind": "statement",
+        "ref": "A1",
+        "eyebrow": "Our answer",
+        "tone": "dark"
+      },
+      {
+        "id": "f1",
+        "kind": "figures",
+        "ref": "Q1",
+        "eyebrow": "The world 12 Planes is entering",
+        "headline": "Four numbers that frame the opportunity",
+        "items": [
+          {
+            "label": "Category",
+            "value": "3:1",
+            "caption": "AI compute demand against available capacity in key regions",
+            "more": "AI is being built faster than anyone can build, understand or secure it. Capacity is sold out, and security is a minor line in budgets of tens of billions per site.",
+            "insight": "I-m1",
+            "evidence": "E-ext-10"
+          },
+          {
+            "label": "Competitor",
+            "value": "0 of 17",
+            "caption": "brands in our audit that speak for the data center as a whole",
+            "more": "Security brands borrow their authority from analyst badges and sell fear. Data center brands sell a part: the hardware, the power, the connection. Nobody owns calm, provable trust across the whole.",
+            "insight": "I-i2",
+            "evidence": "E-web-18"
+          },
+          {
+            "label": "Customer",
+            "value": "6.4M",
+            "caption": "U.S. outage reports in one week of November",
+            "more": "Microsoft, the FAA and Chase failed within days of each other. None was an attack. Each traced back to old infrastructure nobody fully understood. For operators, uptime is the business value of trust.",
+            "insight": "I-c2",
+            "evidence": "E-ext-01"
+          },
+          {
+            "label": "Culture",
+            "value": "7 in 10",
+            "caption": "Americans oppose an AI data center near them",
+            "more": "Data centers have become the visible face of the AI backlash, and in November voters passed more than 20 measures to restrict them. Trust now has to be earned in public.",
+            "insight": "I-m2",
+            "evidence": "E-ext-05"
+          }
+        ]
+      },
+      {
+        "id": "s7",
+        "kind": "claims",
+        "ref": "I-i3",
+        "eyebrow": "The industry",
+        "headline": "The leaders of new categories say one thing, simply.",
+        "items": [
+          "E-web-13",
+          "E-web-14",
+          "E-web-15",
+          "E-web-16"
+        ],
+        "tone": "dark"
+      },
+      {
+        "id": "s8",
+        "kind": "shifts",
+        "ref": "Q1",
+        "eyebrow": "What we heard from you",
+        "headline": "From guarding the perimeter to securing the origin."
+      },
+      {
+        "id": "p1",
+        "kind": "proposition",
+        "ref": "PR2",
+        "eyebrow": "The product proposition"
+      },
+      {
+        "id": "s9",
+        "kind": "principles",
+        "ref": "A1",
+        "eyebrow": "What follows",
+        "headline": "Five principles for leading a new category."
+      },
+      {
+        "id": "v1",
+        "kind": "chapter",
+        "ref": "Q1",
+        "tone": "dark",
+        "eyebrow": "The identity",
+        "headline": "Three ways to lead the category.",
+        "sub": "All three are versions of The Enabler: 12 Planes does not build the AI, it makes it possible. Each territory tells that story differently, and answers what we found in its own way."
+      },
+      {
+        "id": "v2",
+        "kind": "matrix",
+        "ref": "Q1",
+        "eyebrow": "What each territory answers",
+        "headline": "Seven jobs the brand has to do."
+      },
+      {
+        "id": "t1a",
+        "kind": "archetype",
+        "ref": "T1",
+        "eyebrow": "Territory 1 of 3 · The archetype"
+      },
+      {
+        "id": "t1b",
+        "kind": "moodboard",
+        "ref": "T1",
+        "eyebrow": "Territory 1 of 3 · The look",
+        "tone": "dark"
+      },
+      {
+        "id": "t1c",
+        "kind": "story",
+        "ref": "T1",
+        "eyebrow": "Territory 1 of 3 · Strengths and risks"
+      },
+      {
+        "id": "t2a",
+        "kind": "archetype",
+        "ref": "T2",
+        "eyebrow": "Territory 2 of 3 · The archetype"
+      },
+      {
+        "id": "t2b",
+        "kind": "moodboard",
+        "ref": "T2",
+        "eyebrow": "Territory 2 of 3 · The look",
+        "tone": "dark"
+      },
+      {
+        "id": "t2c",
+        "kind": "story",
+        "ref": "T2",
+        "eyebrow": "Territory 2 of 3 · Strengths and risks"
+      },
+      {
+        "id": "t3a",
+        "kind": "archetype",
+        "ref": "T3",
+        "eyebrow": "Territory 3 of 3 · The archetype"
+      },
+      {
+        "id": "t3b",
+        "kind": "moodboard",
+        "ref": "T3",
+        "eyebrow": "Territory 3 of 3 · The look",
+        "tone": "dark"
+      },
+      {
+        "id": "t3c",
+        "kind": "story",
+        "ref": "T3",
+        "eyebrow": "Territory 3 of 3 · Strengths and risks"
+      },
+      {
+        "id": "n1",
+        "kind": "nameIntro",
+        "ref": "T3",
+        "tone": "dark",
+        "eyebrow": "The Foundation · The name question"
+      },
+      {
+        "id": "v3",
+        "kind": "pov",
+        "ref": "T1",
+        "tone": "dark",
+        "eyebrow": "Our point of view"
+      },
+      {
+        "id": "s14",
+        "kind": "ask",
+        "ref": "Q1",
+        "eyebrow": "Today",
+        "headline": "Which territory do we take into Sprint 2?",
+        "sub": "Reactions, not decisions. Then the brand narrative v1 in mid-December.",
+        "tone": "dark"
+      }
+    ],
+    "hidden": [
+      {
+        "id": "s13",
+        "kind": "roadmap",
+        "ref": "P5",
+        "eyebrow": "How the brand grows",
+        "headline": "Start with security. Never stop there.",
+        "steps": [
+          [
+            "Come out of stealth",
+            "One clear claim, said by people who matter.",
+            "Security"
+          ],
+          [
+            "Prove it",
+            "Publish what 12 Planes knows, openly.",
+            "Operations"
+          ],
+          [
+            "Set the standard",
+            "Others measure themselves against 12 Planes.",
+            "Autonomy"
+          ]
+        ]
+      }
+    ]
+  },
+  "brandJobs": [
+    {
+      "id": "J1",
+      "job": "Make the whole data center legible",
+      "challenge": "Infrastructure has outgrown anyone’s understanding, and every vendor sells one slice.",
+      "insights": [
+        "I-m1",
+        "I-i2"
+      ]
+    },
+    {
+      "id": "J2",
+      "job": "Earn trust in public",
+      "challenge": "Security borrows its authority, and the public has turned against data centers.",
+      "insights": [
+        "I-i1",
+        "I-m2"
+      ]
+    },
+    {
+      "id": "J3",
+      "job": "Set the standard for the whole",
+      "challenge": "Standards are forming slice by slice. Nobody owns the whole.",
+      "insights": [
+        "I-m3",
+        "I-c3"
+      ]
+    },
+    {
+      "id": "J4",
+      "job": "Replace fear with confidence",
+      "challenge": "The category sells fear. The founders want uptime and trust as the value.",
+      "insights": [
+        "I-c2",
+        "I-i1"
+      ]
+    },
+    {
+      "id": "J5",
+      "job": "Say it simply",
+      "challenge": "The more complex the product, the simpler the claim has to be.",
+      "insights": [
+        "I-i3"
+      ]
+    },
+    {
+      "id": "J6",
+      "job": "Grow without changing shape",
+      "challenge": "Lead with security now, then operations, then autonomy, always improving.",
+      "insights": [
+        "I-c1"
+      ]
+    },
+    {
+      "id": "J7",
+      "job": "Feel like a new era",
+      "challenge": "AI cannot be built on infrastructure conceived 30 years ago. The brand must not look like an upgrade.",
+      "insights": [
+        "I-m1"
+      ],
+      "evidence": [
+        "E-naor-05"
+      ]
+    }
+  ],
+  "pov": {
+    "headline": "Lead with The Foundation. Build it with the other two.",
+    "body": "The Foundation gives 12 Planes the biggest voice: the company establishing an industry and changing how we relate to AI, so it can reach its full potential. It speaks to ambition, not function. The Architect gives it a system, rethinking how intelligence is built, and The Catalyst explains how the product works and keeps getting better.",
+    "parts": [
+      [
+        "T3",
+        "The ambition",
+        "A new age for AI"
+      ],
+      [
+        "T1",
+        "The system",
+        "Rethinking how intelligence is built"
+      ],
+      [
+        "T2",
+        "The product story",
+        "Where the next leap in AI begins"
+      ]
+    ],
+    "status": "draft",
+    "note": "Our point of view to react to, not a decision.",
+    "history": [
+      {
+        "headline": "Lead with The Architect. Borrow from the other two.",
+        "body": "The Architect is the strongest answer to starting and leading a new category. It owns the name, the whole and the standard. It is also the coolest of the three, so it borrows: the immune system from The Catalyst to explain how the product works and how it keeps improving, and the nines from The Foundation as proof.",
+        "version": "0.5",
+        "reason": "Recalibrated to lead with The Foundation."
+      }
+    ]
+  },
+  "nameExploration": {
+    "id": "N1",
+    "territory": "T3",
+    "status": "open",
+    "question": "Can we bring the scale of the ambition into every part of the brand, including the name?",
+    "origin": "The Foundation moodboard explored .99, point99 and P99 as wordmarks, drawn from Naor’s point that every extra nine changes what it means to be down.",
+    "images": {
+      "wordmarks": "img/name-wordmarks.jpg",
+      "mockup": "img/name-mockup.jpg",
+      "tile": "img/name-tile.jpg"
+    },
+    "nines": [
+      [
+        "99%",
+        "Two nines",
+        "3.65 days down a year"
+      ],
+      [
+        "99.9%",
+        "Three nines",
+        "8.8 hours"
+      ],
+      [
+        "99.99%",
+        "Four nines",
+        "53 minutes"
+      ],
+      [
+        "99.999%",
+        "Five nines",
+        "5 minutes"
+      ]
+    ],
+    "ninesInsight": "In a data center, 99% is failure. The value lives in the nines after the point. That is the strongest story .99 can tell, and also its biggest risk if read literally.",
+    "criteria": [
+      {
+        "id": "C1",
+        "label": "Carries the ambition",
+        "job": "J7"
+      },
+      {
+        "id": "C2",
+        "label": "Lasts from security to autonomy",
+        "job": "J6"
+      },
+      {
+        "id": "C3",
+        "label": "Easy to say, spell and find",
+        "job": "J5"
+      },
+      {
+        "id": "C4",
+        "label": "Can become a standard",
+        "job": "J3"
+      },
+      {
+        "id": "C5",
+        "label": "Ownable and clear to register",
+        "job": null
+      }
+    ],
+    "options": [
+      {
+        "id": "O1",
+        "name": "Keep 12 Planes",
+        "mark": "12 Planes",
+        "for": "Carries the whole, every plane from the dirt to the token. Already known to investors and design partners. Works as the system behind The Foundation.",
+        "against": "Says nothing about trust or a standard on its own. “Planes” can read as aviation.",
+        "scores": {
+          "C1": "partial",
+          "C2": "strong",
+          "C3": "strong",
+          "C4": "partial",
+          "C5": "strong"
+        }
+      },
+      {
+        "id": "O2",
+        "name": "Rename to .99",
+        "mark": ".99 / point99",
+        "for": "Born from Naor’s own words. Short, iconic and typographic. Turns proof into the name.",
+        "against": "Read literally, 99% is two nines, the downtime 12 Planes exists to end. Also reads as a price ending. Hard to say (dot or point?), search and register with leading punctuation. Names a metric, the most functional choice, just as The Foundation moves to ambition.",
+        "scores": {
+          "C1": "partial",
+          "C2": "partial",
+          "C3": "weak",
+          "C4": "strong",
+          "C5": "partial"
+        }
+      },
+      {
+        "id": "O3",
+        "name": "Rename to P99",
+        "mark": "P99",
+        "for": "Engineers recognise it instantly.",
+        "against": "A generic engineering term for 99th-percentile latency, and the name of an established conference for the same audience. Hard to own, and latency is not the 12 Planes story.",
+        "scores": {
+          "C1": "weak",
+          "C2": "weak",
+          "C3": "partial",
+          "C4": "partial",
+          "C5": "weak"
+        }
+      },
+      {
+        "id": "O4",
+        "name": "12 Planes, with .99 as the mark of the standard",
+        "mark": "12 Planes .99",
+        "for": "The company name carries the ambition, .99 carries the proof. Gives Lior’s stamp of approval a form: a data center can be .99 certified. Exactly the role the nines play in the recalibrated Foundation.",
+        "against": "Two names to build. .99 still needs its story, the point every extra nine starts from.",
+        "scores": {
+          "C1": "strong",
+          "C2": "strong",
+          "C3": "partial",
+          "C4": "strong",
+          "C5": "partial"
+        }
+      }
+    ],
+    "pov": "Keep 12 Planes and test .99 as the mark of the standard. If a full rename is on the table, now, before the stealth exit, is the cheapest moment to make it. But it should be decided against criteria, not because the wordmark looks good.",
+    "questions": [
+      "What is the rename solving? Is 12 Planes failing a test, or is .99 simply compelling?",
+      "Should the name carry the ambition, or the proof?",
+      "How does a metric name age when the product moves to operations and autonomy?",
+      "What do investors and design partners already call the company?",
+      "Can we clear it? Trademark, domains and handles before any further design."
+    ],
+    "evidence": [
+      "E-naor-06",
+      "E-ext-17",
+      "E-ext-16",
+      "E-lior-02",
+      "E-deck-name"
+    ],
+    "history": [
+      {
+        "version": "0.9",
+        "question": "Should 12 Planes become .99?",
+        "reason": "Reframed from a yes/no rename to the scale of the ambition across the brand."
+      }
+    ]
+  },
+  "proposition": {
+    "id": "PR",
+    "headline": "Building compounding value",
+    "sub": "What 12 Planes brings. Each layer of value makes the next one possible.",
+    "evidence": [
+      "E-narr-10"
+    ],
+    "items": [
+      {
+        "id": "PR1",
+        "name": "Protect",
+        "body": "Defend against threats from every direction. That covers physical, IT and OT attacks, and also the AI itself acting outside its bounds. The data stays where it belongs.",
+        "stage": "Security",
+        "insights": [
+          "I-c1",
+          "I-m1",
+          "I-m3"
+        ],
+        "answers": "Leads with security, as the founders want, and covers what single-slice vendors cannot."
+      },
+      {
+        "id": "PR2",
+        "name": "Perform",
+        "body": "Catch issues before they cause downtime. Credibility shows up as reliability, and that’s worth real money.",
+        "stage": "Operations",
+        "insights": [
+          "I-c2",
+          "I-m1"
+        ],
+        "answers": "Turns trust into uptime, the business value Naor describes, and proof the market can measure."
+      },
+      {
+        "id": "PR3",
+        "name": "Progress",
+        "body": "When people can trust AI with their data and their decisions, they use it for more. 12 Planes helps grow the whole AI economy, not just protect it.",
+        "stage": "Autonomy",
+        "insights": [
+          "I-m2",
+          "I-c3",
+          "I-i2"
+        ],
+        "answers": "Answers the backlash with trust, and gives the ambition its reason: unlocking AI’s full potential."
+      }
+    ]
+  },
+  "landscape": {
+    "segments": {
+      "security": "Data security",
+      "ai": "AI infrastructure",
+      "dc": "Data center",
+      "standard": "Standard setters",
+      "moved": "Moved category"
+    },
+    "lenses": [
+      {
+        "id": "authority",
+        "name": "Authority",
+        "source": "Kontrapunkt competitor audit",
+        "status": "From the deck",
+        "x": [
+          "Borrowed authority",
+          "Own authority"
+        ],
+        "y": [
+          "The brand in focus",
+          "The world in focus"
+        ],
+        "target": {
+          "pos": [
+            0.86,
+            0.759
+          ],
+          "label": "12 Planes",
+          "area": [
+            [
+              0.7403189066059226,
+              0.6005625879043601
+            ],
+            [
+              0.9806378132118451,
+              0.960618846694796
+            ]
+          ],
+          "areaLabel": "The open space"
+        },
+        "insight": "Security brands cluster where authority is borrowed and the product is the hero. The brands that moved their category sit opposite. Next to them, the space is open."
+      },
+      {
+        "id": "role",
+        "name": "Role and promise",
+        "source": "Kontrapunkt positioning axes. Placements are a draft.",
+        "status": "Draft placements",
+        "x": [
+          "Vendor",
+          "Standard"
+        ],
+        "y": [
+          "Fear and urgency",
+          "Calm confidence"
+        ],
+        "target": {
+          "pos": [
+            0.86,
+            0.86
+          ],
+          "label": "12 Planes",
+          "area": [
+            [
+              0.68,
+              0.68
+            ],
+            [
+              0.98,
+              0.98
+            ]
+          ],
+          "areaLabel": "Where 12 Planes is aiming"
+        },
+        "insight": "Standards are emerging, but through risk and urgency (Lava, OWASP). The calm, confident standard for the whole data center is still unclaimed."
+      }
+    ],
+    "competitors": [
+      {
+        "name": "Nozomi Networks",
+        "segment": "security",
+        "evidence": [
+          "E-web-01"
+        ],
+        "note": "Authority borrowed from analysts.",
+        "authority": [
+          0.06,
+          0.141
+        ],
+        "role": [
+          0.34,
+          0.36
+        ]
+      },
+      {
+        "name": "Claroty",
+        "segment": "security",
+        "evidence": [
+          "E-web-02"
+        ],
+        "note": "Authority borrowed from analysts.",
+        "authority": [
+          0.14,
+          0.241
+        ],
+        "role": [
+          0.38,
+          0.38
+        ]
+      },
+      {
+        "name": "Dragos",
+        "segment": "security",
+        "evidence": [
+          "E-web-04"
+        ],
+        "note": "The only security brand with a mission larger than its product. The look still belongs to the control room.",
+        "authority": [
+          0.24,
+          0.399
+        ],
+        "role": [
+          0.46,
+          0.22
+        ]
+      },
+      {
+        "name": "Palo Alto Networks",
+        "segment": "security",
+        "evidence": [
+          "E-web-05"
+        ],
+        "note": "The incumbent everyone is measured against. Scale is the message, little point of view.",
+        "authority": [
+          0.08,
+          0.051
+        ],
+        "role": [
+          0.6,
+          0.32
+        ]
+      },
+      {
+        "name": "CrowdStrike",
+        "segment": "security",
+        "evidence": [
+          "E-web-06"
+        ],
+        "note": "The one-platform promise, told through threats. The opposite of calm proof.",
+        "authority": [
+          0.2,
+          0.1
+        ],
+        "role": [
+          0.52,
+          0.1
+        ]
+      },
+      {
+        "name": "Wiz",
+        "segment": "security",
+        "evidence": [
+          "E-web-03"
+        ],
+        "note": "Proof a security brand can be warm. Too playful for the calm line the founders want.",
+        "authority": [
+          0.3,
+          0.219
+        ],
+        "role": [
+          0.42,
+          0.68
+        ]
+      },
+      {
+        "name": "Cerebras",
+        "segment": "ai",
+        "evidence": [
+          "E-web-18"
+        ],
+        "note": "Chips and systems. Sells compute, not trust.",
+        "authority": [
+          0.4,
+          0.1
+        ],
+        "role": [
+          0.22,
+          0.56
+        ]
+      },
+      {
+        "name": "Nebius",
+        "segment": "ai",
+        "evidence": [
+          "E-web-18"
+        ],
+        "note": "Neocloud customer as much as neighbour.",
+        "authority": [
+          0.479,
+          0.2
+        ],
+        "role": [
+          0.18,
+          0.58
+        ]
+      },
+      {
+        "name": "CoreWeave",
+        "segment": "ai",
+        "evidence": [
+          "E-web-18"
+        ],
+        "note": "Neocloud customer as much as neighbour.",
+        "authority": [
+          0.54,
+          0.38
+        ],
+        "role": [
+          0.26,
+          0.54
+        ]
+      },
+      {
+        "name": "Fireworks",
+        "segment": "ai",
+        "evidence": [
+          "E-web-18"
+        ],
+        "note": "Inference. Sells speed, not trust.",
+        "authority": [
+          0.46,
+          0.64
+        ],
+        "role": [
+          0.2,
+          0.62
+        ]
+      },
+      {
+        "name": "Vertiv",
+        "segment": "dc",
+        "evidence": [
+          "E-web-09",
+          "E-web-12"
+        ],
+        "note": "Sells the hardware 12 Planes will watch over. As much partner as neighbour.",
+        "authority": [
+          0.36,
+          0.321
+        ],
+        "role": [
+          0.16,
+          0.5
+        ]
+      },
+      {
+        "name": "Schneider Electric",
+        "segment": "dc",
+        "evidence": [
+          "E-web-10"
+        ],
+        "note": "Products, not a point of view. Owns “AI factory” language with Nvidia.",
+        "authority": [
+          0.42,
+          0.421
+        ],
+        "role": [
+          0.24,
+          0.52
+        ]
+      },
+      {
+        "name": "Equinix",
+        "segment": "dc",
+        "evidence": [
+          "E-web-11"
+        ],
+        "note": "The closest neighbour with a real position. Owns connection. 12 Planes can own understanding and trust.",
+        "authority": [
+          0.54,
+          0.56
+        ],
+        "role": [
+          0.38,
+          0.76
+        ]
+      },
+      {
+        "name": "Cursor",
+        "segment": "moved",
+        "evidence": [
+          "E-web-16"
+        ],
+        "note": "Speaks to what people build, not the tool.",
+        "authority": [
+          0.56,
+          0.72
+        ],
+        "role": [
+          0.4,
+          0.8
+        ]
+      },
+      {
+        "name": "Tesla",
+        "segment": "moved",
+        "evidence": [
+          "E-web-15"
+        ],
+        "note": "One idea, one sentence.",
+        "authority": [
+          0.5,
+          0.85
+        ],
+        "role": [
+          0.55,
+          0.78
+        ]
+      },
+      {
+        "name": "SpaceX",
+        "segment": "moved",
+        "evidence": [
+          "E-web-14"
+        ],
+        "note": "A mission large enough to grow into.",
+        "authority": [
+          0.62,
+          0.92
+        ],
+        "role": [
+          0.6,
+          0.86
+        ]
+      },
+      {
+        "name": "Palantir",
+        "segment": "moved",
+        "evidence": [
+          "E-web-13"
+        ],
+        "note": "Made software feel like infrastructure and named its category first.",
+        "authority": [
+          0.557,
+          0.8
+        ],
+        "role": [
+          0.72,
+          0.66
+        ]
+      },
+      {
+        "name": "Irregular",
+        "segment": "standard",
+        "evidence": [
+          "E-ext-13"
+        ],
+        "note": "Sets security standards for frontier models. The model for owning a standard, with a reputational caveat.",
+        "role": [
+          0.74,
+          0.46
+        ]
+      },
+      {
+        "name": "Lava Security",
+        "segment": "standard",
+        "evidence": [
+          "E-ext-14",
+          "E-ext-15"
+        ],
+        "note": "Leads an OWASP top 10 for AI data center risks. The closest challenger for the standard, framed through risk.",
+        "role": [
+          0.7,
+          0.28
+        ]
+      }
+    ],
+    "toInvestigate": [
+      {
+        "name": "Uptime Institute and TIA-942",
+        "why": "They already certify data centers by tier. Any .99 standard mark would sit next to them."
+      },
+      {
+        "name": "NVIDIA AI factory reference designs",
+        "why": "NVIDIA is defining what a good AI data center looks like, with Schneider and Vertiv as partners."
+      },
+      {
+        "name": "Hyperscalers’ own tooling",
+        "why": "AWS, Microsoft and Google build this internally. Neoclouds first, hyperscalers later means they are future customers and competitors."
+      },
+      {
+        "name": "OT security consolidation",
+        "why": "Claroty, Nozomi and Armis are moving up from industrial sites into data centers."
+      },
+      {
+        "name": "Buyers, not brands",
+        "why": "Interview three to five neocloud operators on how they choose and who they trust. The audit so far is websites only."
+      }
+    ]
+  },
+  "enabler": "All the territories are versions of one master archetype, The Enabler. 12 Planes does not build the AI. It makes it possible for AI to go further. Each territory tells that story differently.",
+  "drafts": [
+    {
+      "id": "DR1",
+      "where": "The solution",
+      "was": "Placeholder for 12 Planes product (initial solution for customers)",
+      "status": "draft",
+      "text": "12 Planes gives AI data centers a brain. One connected system that sees across power, cooling, hardware, networks, compute and security, so operators know what is happening, what is about to happen and what to do about it."
+    },
+    {
+      "id": "DR2",
+      "where": "The product",
+      "was": "Copy from another client’s project (one engine tuned per industry, SAP and Oracle, manufacturing and logistics). Remove before anything is shared.",
+      "status": "draft",
+      "text": "One operational model for the whole data center. Signals from cooling, power, hardware, networks and software come together in one model, so a change anywhere is traced across everything it touches. Trust builds step by step: first it watches and warns, then it recommends and a person approves, then it acts on its own within guardrails. Security, then operations, then autonomy."
+    },
+    {
+      "id": "DR3",
+      "where": "What it gives our customers",
+      "was": "x y z",
+      "status": "draft",
+      "text": "Fewer incidents, caught before they cost. Faster answers when something does go wrong. Proof on demand, for customers, auditors and enterprise contracts."
+    },
+    {
+      "id": "DR4",
+      "where": "One-liners",
+      "was": "x",
+      "status": "draft",
+      "text": "Every plane in view. / The calm before every storm. / Know before it breaks. / Built so intelligence can go further."
+    },
+    {
+      "id": "DR5",
+      "where": "Positioning map labels",
+      "was": "Placeholder label (five) and placeholder axis label",
+      "status": "draft",
+      "text": "Labels for the vendor-to-standard map: Security vendors (fear and urgency, vendor). AI infrastructure (calm, vendor). Emerging standards (urgency, standard): Lava, OWASP. Category leaders (calm, own authority). The area 12 Planes is aiming for: the calm, confident standard for the whole data center."
+    },
+    {
+      "id": "DR6",
+      "where": "Conference mockup",
+      "was": "Headline goes here. Praesent placerat, magna in vehicula vestibulum…",
+      "status": "draft",
+      "text": "Headline: Every plane, one standard. Body: Two days with the people who build, run and secure the infrastructure AI depends on. From the dirt to the token."
+    },
+    {
+      "id": "DR7",
+      "where": "Website mockup card",
+      "was": "Data Hall Management. Nullam varius turpis et commodo pharetra… (and “Cooming soon”)",
+      "status": "draft",
+      "text": "Data Hall Management: See every rack, every degree and every watt in one view, and know which change will matter before it does. Also fix “Cooming soon” to “Coming soon”."
+    },
+    {
+      "id": "DR8",
+      "where": "The Pioneer (parked)",
+      "was": "Divider only",
+      "status": "draft",
+      "text": "If it comes back: The enabler as an explorer of new frontiers. 12 Planes makes it safe for intelligence to go where it has never been: new sites, new scales, new uses. Lead line to react to: “Where AI goes next, we go first.”"
+    },
+    {
+      "id": "DR9",
+      "where": "Duplicate key question",
+      "was": "The same “How might we” slide appears twice in the Sprint 1 deck",
+      "status": "draft",
+      "text": "Keep one, at the start. Use the reframed question there: How do we start a category the world doesn’t have a name for yet, and become the one that leads it?"
+    }
+  ]
+}
