@@ -178,14 +178,21 @@ aside.trace { background: var(--bg); border: 0; border-left: 1px solid var(--lin
 .tabs button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .view { min-width: 0; }
 /* graph */
-.gwrap { overflow: auto; border-radius: 2px; background: var(--bg); max-height: calc(100vh - 160px); }
-.graph { position: relative; width: 1480px; }
+.gwrap { overflow: auto; border-radius: 2px; background: var(--bg); max-height: calc(100vh - 160px); padding-top: 4px; }
+.graph { position: relative; width: 100%; }
 .graph svg.edges { position: absolute; inset: 0; pointer-events: none; overflow: visible; }
 .graph svg path { fill: none; stroke: var(--line); stroke-width: 1.2; transition: stroke .2s, opacity .2s; }
 .graph.focus svg path { opacity: .12; }
 .graph.focus svg path.rel { opacity: 1; stroke: var(--accent); stroke-width: 1.5; }
-.gcol { position: absolute; top: 0; font-family: var(--f-body); font-size: 11px; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; color: var(--accent); }
-.ghead { position: absolute; font-family: var(--f-body); font-size: 10px; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; color: var(--muted); }
+.grow { position: absolute; left: 0; display: flex; gap: 14px; align-items: baseline; border-top: 1px solid var(--line); padding-top: 10px; }
+.gcol { font-family: var(--f-body); font-size: 11px; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; color: var(--accent); }
+.gnote { font-family: var(--f-display); font-weight: 300; font-size: 16px; color: var(--ink); }
+.gnode.terr .s { font-size: 13px; color: var(--muted); }
+.gnode.rec { background: var(--ink); color: var(--bg); padding: 16px 18px; }
+.gnode.rec .t { font-size: 24px; }
+.gnode.rec .s { color: var(--bg); opacity: .75; }
+.gnode.rec .k { color: var(--accent); }
+.ghead { position: absolute; left: 0; font-family: var(--f-body); font-size: 10px; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; color: var(--muted); }
 .gnode { all: unset; box-sizing: border-box; position: absolute; cursor: pointer; background: var(--surface); border-radius: 2px; padding: 8px 10px; display: flex; flex-direction: column; gap: 3px; transition: opacity .2s, box-shadow .2s; }
 .gnode:hover { box-shadow: inset 0 0 0 1px var(--accent); }
 .gnode:focus-visible { outline: 2px solid var(--accent); }
@@ -292,14 +299,14 @@ aside.trace { background: var(--bg); border: 0; border-left: 1px solid var(--lin
   </div>
   <div class="layout">
     <div class="view">
-      <section id="vgraph"><p class="ghint">Territories on the left, then the answer, principles and insights, down to the evidence on the right. Select anything to light up its chain.</p><div class="gwrap"><div class="graph" id="graph"></div></div></section>
+      <section id="vgraph"><p class="ghint">Our recommendation at the top, traced down through the answer, principles and insights to the evidence. Select anything to light up its chain.</p><div class="gwrap"><div class="graph" id="graph"></div></div></section>
       <main class="map" id="map" hidden><p class="empty">Loading the argument…</p></main>
       <section id="vland" hidden><div class="land" id="land"></div></section>
       <section id="vcollab" hidden><div class="collab" id="collab"></div></section>
     </div>
     <aside class="trace" id="trace" aria-live="polite"></aside>
   </div>
-  <div class="kpfoot">© Kontrapunkt · <a href="/admin.html" id="adminlink" hidden style="color:inherit">Manage access</a> · <a href="/auth/logout" style="color:inherit">Sign out</a></div>
+  <div class="kpfoot">© Kontrapunkt · <a href="/" style="color:inherit">Start page</a> · <a href="/admin.html" id="adminlink" hidden style="color:inherit">Manage access</a> · <a href="/auth/logout" style="color:inherit">Sign out</a></div>
 <script>fetch("/api/me").then(r=>r.json()).then(m=>{if(m.admin)document.getElementById("adminlink").hidden=false}).catch(()=>{})</script>
 </div>
 
@@ -329,6 +336,7 @@ aside.trace { background: var(--bg); border: 0; border-left: 1px solid var(--lin
     D.insights.forEach(i => i.evidence.forEach(e => link(i.id, e)));
     (D.proposition ? D.proposition.items : []).forEach(p => { p.insights.forEach(i => link(p.id, i)); D.proposition.evidence.forEach(e => link(p.id, e)); });
     D.territories.forEach(t => {
+      if (t.status !== 'parked') { link(t.id, 'A1'); link(t.id, 'Q1'); }
       t.expresses.forEach(p => link(t.id, p));
       const seen = new Set();
       (t.answers || []).filter(a => a.strength === 'strong').forEach(a => ((D.brandJobs || []).find(j => j.id === a.job) || { insights: [] }).insights.forEach(i => { if (!seen.has(i)) { seen.add(i); link(t.id, i); } }));
@@ -390,6 +398,7 @@ aside.trace { background: var(--bg); border: 0; border-left: 1px solid var(--lin
 
     const pillars = D.pillars.map(p => `<div class="pillar"><span class="label">${esc(p.title)}</span>${p.insights.map(i => card(byId[i])).join('')}</div>`).join('');
     $('#map').innerHTML = `
+      <div id="wipblock"></div>
       <section class="block">
         <div class="block-head"><span class="label">The answer</span><p>Select anything to trace its rationale</p></div>
         <div class="qa">${card(D.question, 'question')}${card(D.answer, 'answer')}</div>
@@ -529,75 +538,92 @@ aside.trace { background: var(--bg); border: 0; border-left: 1px solid var(--lin
     try { localStorage.setItem('kp12-view', v); } catch (_) {}
   }
 
-  /* ---------- graph ---------- */
-  const COLS = [{ x: 1210, w: 270, title: 'Evidence' }, { x: 900, w: 240, title: 'Insights' }, { x: 600, w: 230, title: 'Principles and proposition' }, { x: 290, w: 240, title: 'Question and answer' }, { x: 0, w: 230, title: 'Territories' }];
-  let gItems = [];
+  /* ---------- graph (top-down: recommendation first, evidence last) ---------- */
+  let gRows = [];
   function renderGraph() {
     const used = new Set();
     Object.keys(down).forEach(k => down[k].forEach(c => used.add(c)));
+    const live = D.territories.filter(t => t.status !== 'parked');
+    const rec = (D.pov && D.pov.parts && D.pov.parts[0] && D.pov.parts[0][0]) || 'T3';
+    const terr = [live.find(t => t.id === rec), ...live.filter(t => t.id !== rec)].filter(Boolean);
     const srcOrder = [['Interviews and founders', s => ['S-ilia', 'S-lior', 'S-naor', 'S-founders'].includes(s.id)], ['Competitor audit', s => s.id === 'S-audit'], ['External research', s => ['primary', 'tier1', 'trade'].includes(s.tier) && s.id !== 'S-narr'], ['Desk research', s => s.id === 'S-desk'], ['Our own work', s => s.id === 'S-narr']];
-    const evs = D.evidence.filter(e => used.has(e.id));
-    gItems = [];
-    const taken = new Set();
+    const evs = D.evidence.filter(e => used.has(e.id)); const taken = new Set(); const evItems = [];
     srcOrder.forEach(([h, f]) => {
-      const group = evs.filter(e => !taken.has(e.id) && f(D.sources.find(s => s.id === e.source) || {}));
-      if (!group.length) return;
-      gItems.push({ head: h, col: 0 });
-      group.forEach(e => { taken.add(e.id); gItems.push({ id: e.id, col: 0 }); });
+      const g = evs.filter(e => !taken.has(e.id) && f(D.sources.find(x => x.id === e.source) || {}));
+      if (!g.length) return; evItems.push({ head: h }); g.forEach(e => { taken.add(e.id); evItems.push({ id: e.id }); });
     });
-    D.pillars.forEach(p => { gItems.push({ head: p.title, col: 1 }); p.insights.forEach(i => gItems.push({ id: i, col: 1 })); });
-    gItems.push({ head: 'Principles', col: 2 }); D.principles.forEach(p => gItems.push({ id: p.id, col: 2 }));
-    if (D.proposition) { gItems.push({ head: 'Proposition', col: 2 }); D.proposition.items.forEach(p => gItems.push({ id: p.id, col: 2 })); }
-    gItems.push({ id: 'Q1', col: 3 }); gItems.push({ id: 'A1', col: 3 });
-    D.territories.filter(t => t.status !== 'parked').forEach(t => gItems.push({ id: t.id, col: 4 }));
-    const G = $('#graph');
-    G.innerHTML = '<svg class="edges" id="gedges"></svg>' + COLS.map(c => `<div class="gcol" style="left:${c.x}px;width:${c.w}px">${esc(c.title)}</div>`).join('') +
-      gItems.map((it, k) => {
-        const st = `left:${COLS[it.col].x}px;width:${COLS[it.col].w}px;top:0`;
-        if (it.head) return `<div class="ghead" data-k="${k}" style="${st}">${esc(it.head)}</div>`;
+    gRows = [
+      { title: 'Our recommendation', note: D.pov ? D.pov.headline : '', per: 3, items: terr.map((t, i) => ({ id: t.id, rec: i === 0 })) },
+      { title: 'The question and our answer', per: 2, items: [{ id: 'Q1' }, { id: 'A1' }] },
+      { title: 'Principles and proposition', per: 4, items: [...D.principles.map(p => ({ id: p.id })), ...((D.proposition && D.proposition.items) || []).map(p => ({ id: p.id }))] },
+      { title: 'What we found', per: 3, items: D.pillars.flatMap(p => p.insights.map(i => ({ id: i }))) },
+      { title: 'The evidence', per: 4, items: evItems }
+    ];
+    const G = $('#graph'); let k = 0;
+    G.innerHTML = '<svg class="edges" id="gedges"></svg>' + gRows.map((r, ri) =>
+      `<div class="grow" data-row="${ri}"><span class="gcol">${esc(r.title)}</span>${r.note ? `<span class="gnote">${esc(r.note)}</span>` : ''}</div>` +
+      r.items.map(it => {
+        const kk = k++; it.k = kk;
+        if (it.head) return `<div class="ghead" data-k="${kk}">${esc(it.head)}</div>`;
         const o = byId[it.id]; if (!o) return '';
-        if (o._type === 'evidence') return `<button class="gnode ev ${o.type === 'quote' ? 'quote' : ''}" data-k="${k}" data-id="${o.id}" style="${st}" title="${esc(o.text)}"><span class="t">${o.type === 'quote' ? '“' + esc(o.text) + '”' : esc(o.brand ? o.brand + ': ' + (o.claim || o.text) : o.text)}</span></button>`;
-        const t = o._type === 'territory' ? o.name : (o.headline || o.text);
-        return `<button class="gnode ${o._type === 'answer' ? 'ans' : ''}" data-k="${k}" data-id="${o.id}" style="${st}"><span class="k">${esc(TYPE[o._type])}${o._type === 'proposition' ? ' · ' + esc(o.stage) : ''}</span><span class="t">${esc(o._type === 'territory' ? t + ' · ' + (o.line || '') : t)}</span></button>`;
-      }).join('');
+        if (o._type === 'evidence') return `<button class="gnode ev ${o.type === 'quote' ? 'quote' : ''}" data-k="${kk}" data-id="${o.id}" title="${esc(o.text)}"><span class="t">${o.type === 'quote' ? '“' + esc(o.text) + '”' : esc(o.brand ? o.brand + ': ' + (o.claim || o.text) : o.text)}</span></button>`;
+        if (o._type === 'territory') return `<button class="gnode terr ${it.rec ? 'rec' : ''}" data-k="${kk}" data-id="${o.id}"><span class="k">${it.rec ? 'Recommended · lead territory' : 'Builds on it'}</span><span class="t">${esc(o.name)}</span><span class="s">${esc(o.line || '')}</span></button>`;
+        return `<button class="gnode ${o._type === 'answer' ? 'ans' : ''}" data-k="${kk}" data-id="${o.id}"><span class="k">${esc(TYPE[o._type])}${o._type === 'proposition' ? ' · ' + esc(o.stage) : ''}</span><span class="t">${esc(o.headline || o.text)}</span></button>`;
+      }).join('')).join('');
     if (!G._wired) { G._wired = true; G.addEventListener('click', e => { const b = e.target.closest('[data-id]'); if (b) go(b.dataset.id); }); }
   }
   function layoutGraph() {
     const G = $('#graph'); if (!G || $('#vgraph').hidden) return;
-    const els = [...G.querySelectorAll('[data-k]')];
-    const byCol = [[], [], [], [], []];
-    els.forEach(el => byCol[gItems[+el.dataset.k].col].push(el));
-    const top0 = 30;
-    const colH = byCol.map(list => list.reduce((a, el) => a + el.offsetHeight + (el.classList.contains('ghead') ? 14 : 8), 0));
-    const H = Math.max(...colH) + top0;
-    byCol.forEach((list, c) => {
-      const n = list.length;
-      const extra = c === 0 ? 0 : Math.min(36, Math.max(0, (H - top0 - colH[c]) / (n + 1)));
-      const used = colH[c] + extra * n;
-      let y = top0 + Math.max(0, (H - top0 - used) / 2);
-      list.forEach(el => { const hd = el.classList.contains('ghead'); el.style.top = y + 'px'; y += el.offsetHeight + (hd ? 6 : 8 + extra); });
+    const W = Math.max(720, G.parentElement.clientWidth - 4); G.style.width = W + 'px';
+    const gap = 12, rowGap = 56; let y = 0;
+    const el = k => G.querySelector(`[data-k="${k}"]`);
+    gRows.forEach((r, ri) => {
+      const head = G.querySelector(`[data-row="${ri}"]`); head.style.top = y + 'px'; head.style.width = W + 'px';
+      y += head.offsetHeight + 10;
+      const colW = (W - gap * (r.per - 1)) / r.per;
+      let line = [], lineW = 0;
+      const flush = () => {
+        if (!line.length) return;
+        line.forEach(n => { n.e.style.width = n.w + 'px'; });
+        const h = Math.max(...line.map(n => n.e.offsetHeight));
+        const total = line.reduce((a, n) => a + n.w, 0) + gap * (line.length - 1);
+        let x = ri <= 1 ? (W - total) / 2 : 0;
+        line.forEach(n => { n.e.style.left = x + 'px'; n.e.style.top = y + 'px'; x += n.w + gap; });
+        y += h + (line[0].head ? 6 : gap); line = []; lineW = 0;
+      };
+      r.items.forEach(it => {
+        const e = el(it.k); if (!e) return;
+        let w = colW;
+        if (ri === 0) w = it.rec ? Math.min(460, W * .4) : Math.min(300, W * .27);
+        if (ri === 1) w = it.id === 'A1' ? Math.min(560, W * .5) : Math.min(420, W * .36);
+        if (it.head) { flush(); line.push({ e, w: W, head: true }); flush(); return; }
+        if (line.length && lineW + gap + w > W + 1) flush();
+        line.push({ e, w }); lineW += (line.length > 1 ? gap : 0) + w;
+      });
+      flush(); y += rowGap - gap;
     });
-    G.style.height = (H + 20) + 'px';
+    G.style.height = y + 'px';
     drawEdges();
   }
   function drawEdges() {
     const G = $('#graph'), svg = $('#gedges');
-    const pos = {};
-    G.querySelectorAll('.gnode').forEach(el => { pos[el.dataset.id] = { x: el.offsetLeft, y: el.offsetTop + Math.min(el.offsetHeight / 2, 16), w: el.offsetWidth }; });
+    const pos = {}, rowOf = {};
+    gRows.forEach((r, ri) => r.items.forEach(it => { if (it.id) rowOf[it.id] = ri; }));
+    G.querySelectorAll('.gnode').forEach(el => { pos[el.dataset.id] = { x: el.offsetLeft + el.offsetWidth / 2, top: el.offsetTop, bottom: el.offsetTop + el.offsetHeight }; });
     let paths = '';
     Object.keys(down).forEach(p => {
       if (!pos[p]) return;
       down[p].forEach(c => {
-        if (!pos[c]) return;
+        if (!pos[c] || rowOf[c] !== rowOf[p] + 1) return;
         const a = pos[p], b = pos[c];
-        const x1 = a.x + a.w, y1 = a.y, x2 = b.x, y2 = b.y;
-        const dx = Math.max(40, (x2 - x1) / 2);
-        paths += `<path data-a="${p}" data-b="${c}" d="M${x1},${y1} C${x1 + dx},${y1} ${x2 - dx},${y2} ${x2},${y2}"/>`;
+        const x1 = a.x, y1 = a.bottom, x2 = b.x, y2 = b.top;
+        const dy = Math.max(28, (y2 - y1) / 2);
+        paths += `<path data-a="${p}" data-b="${c}" d="M${x1},${y1} C${x1},${y1 + dy} ${x2},${y2 - dy} ${x2},${y2}"/>`;
       });
     });
     svg.setAttribute('width', G.offsetWidth); svg.setAttribute('height', G.offsetHeight);
     svg.innerHTML = paths;
-    hlGraph(location.hash.slice(1));
+    hlGraph(C.current);
   }
   function hlGraph(id) {
     const G = $('#graph'); if (!G) return;
@@ -609,7 +635,7 @@ aside.trace { background: var(--bg); border: 0; border-left: 1px solid var(--lin
     G.classList.add('focus');
     G.querySelectorAll('.gnode').forEach(n => { if (n.dataset.id === id) n.classList.add('sel'); else if (rel.has(n.dataset.id)) n.classList.add('rel'); });
     const se = G.querySelector('.gnode.sel'), W = G.parentElement;
-    if (se && W && !$('#vgraph').hidden) { const r = se.offsetTop - W.clientHeight / 2 + se.offsetHeight / 2; W.scrollTo({ top: Math.max(0, r), behavior: 'smooth' }); }
+    if (se && W && !$('#vgraph').hidden && (se.offsetTop < W.scrollTop || se.offsetTop + se.offsetHeight > W.scrollTop + W.clientHeight)) { const r = se.offsetTop - W.clientHeight / 3; W.scrollTo({ top: Math.max(0, r), behavior: 'smooth' }); }
     G.querySelectorAll('path').forEach(p => {
       const a = p.dataset.a, b = p.dataset.b;
       if ((a === id || upn.has(a)) && (b === id || upn.has(b) ) || (a === id || dn.has(a)) && dn.has(b) || (upn.has(a) && b === id)) p.classList.add('rel');
@@ -677,7 +703,14 @@ aside.trace { background: var(--bg); border: 0; border-left: 1px solid var(--lin
     content: {}, suggestions: [], log: [], people: {}, config: { overrides: {} }, editing: null, current: null, ready: false };
   let liveDecisions = [];
   const fmtDate = t => { try { return new Date(t).toLocaleString([], { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }); } catch (_) { return ''; } };
-  const nodeTitle = id => { const o = byId[id]; return o ? (o.headline || o.name || o.text || id) : id; };
+  const nodeTitle = id => {
+    const o = byId[id]; if (o) return o.headline || o.name || o.text || id;
+    if (id === 'pov') return 'Our point of view (Present)';
+    if (id.startsWith('wip-')) return 'WIP slide (team only): ' + id.slice(4);
+    if (id === 'name') return 'The name question (Present)';
+    if (id.startsWith('screen-')) { const sc = (D.present && D.present.screens || []).find(x => x.id === id.slice(7)); return 'Present slide: ' + ((sc && (sc.headline || sc.eyebrow)) || id.slice(7)); }
+    return id;
+  };
   const mode = () => C.role === 'edit' && C.pref === 'suggest' ? 'suggest' : C.role;
 
   function applyOverrides() {
@@ -882,9 +915,15 @@ aside.trace { background: var(--bg); border: 0; border-left: 1px solid var(--lin
     setView(v0);
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(layoutGraph);
     window.addEventListener('resize', () => { clearTimeout(window.__lg); window.__lg = setTimeout(layoutGraph, 150); });
-    const h = location.hash.slice(1); C.current = byId[h] ? h : null;
+    const h = location.hash.slice(1); C.current = byId[h] ? h : ((D.pov && D.pov.parts && D.pov.parts[0] && D.pov.parts[0][0]) || null);
     renderTrace(C.current); highlight(C.current);
     wireCollab(); startCollab();
+    fetch('wip.json', { credentials: 'same-origin' }).then(r => r.ok ? r.json() : null).then(w => {
+      if (!w) return; window.__WIP = w;
+      const paintWip = () => { const el = document.getElementById('wipblock'); if (el) el.innerHTML = `<section class="block"><div class="block-head"><span class="label" style="color:#974d32">Work in progress · Team only</span><p>Not visible to the client</p></div>
+        <a class="node" href="present.html#w0" style="text-decoration:none;color:inherit"><span class="label" style="color:#974d32">${esc(w.meta.status)}</span><span class="t">${esc(w.meta.title)}</span><span class="b">${w.screens.length} slides: messaging hierarchy, narrative, lead lines, one-liners, manifesto and how it fits the strategy. Open in Present.</span></a></section>`; };
+      paintWip(); const orig = renderMap; renderMap = function () { orig(); paintWip(); };
+    }).catch(() => {});
     window.addEventListener('hashchange', () => show(location.hash.slice(1)));
   }).catch(err => {
     $('#map').innerHTML = `<div class="err">The argument data did not load (${esc(err.message)}). Reload the page to try again.</div>`;

@@ -328,6 +328,48 @@ h1, h2 { font-family: var(--f-display); font-weight: 300; letter-spacing: -0.012
 .ev.quote .t { font-family: var(--f-display); font-weight: 300; }
 
 [hidden] { display: none !important; }
+.wipbadge { position: absolute; top: calc(env(safe-area-inset-top, 0px) + 16px); right: max(var(--pad), env(safe-area-inset-right, 0px)); font-family: var(--f-body); font-size: 11px; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; background: #974d32; color: #fff; padding: 5px 10px; border-radius: 999px; z-index: 2; }
+.wgrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(10px, 1.2vw, 18px); }
+.wgrid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 1000px) { .wgrid, .wgrid.three { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .wgrid, .wgrid.three { grid-template-columns: minmax(0, 1fr); } }
+.wcard { background: var(--cardc); border-radius: 2px; padding: clamp(16px, 1.6vw, 24px); display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.wcard h3 { font-family: var(--f-display); font-weight: 300; font-size: clamp(19px, 1.7vw, 26px); line-height: 1.15; margin: 0; }
+.wcard p { margin: 0; font-size: clamp(13px, 1vw, 15px); line-height: 1.45; color: var(--muted); }
+.wn { font-family: var(--f-body); font-size: 11px; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; color: var(--acc); }
+.wread { font-family: var(--f-body); font-size: 12px; color: #974d32; line-height: 1.4; }
+.wone { font-family: var(--f-display); font-weight: 300; font-size: clamp(16px, 1.3vw, 20px); line-height: 1.2; border-top: 1px solid var(--line); padding-top: 8px; }
+.wnote { margin: 0; font-size: clamp(14px, 1.1vw, 17px); color: #974d32; max-width: 80ch; line-height: 1.45; }
+.wlines { display: flex; flex-direction: column; gap: 8px; }
+.wline { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(14px, 2vw, 32px); background: var(--cardc); border-radius: 2px; padding: clamp(14px, 1.4vw, 22px); align-items: start; }
+@media (max-width: 860px) { .wline { grid-template-columns: minmax(0, 1fr); } }
+.wline h3 { font-family: var(--f-display); font-weight: 300; font-size: clamp(20px, 2vw, 32px); line-height: 1.15; margin: 6px 0 0; }
+.wline p { margin: 0; font-size: clamp(13px, 1.05vw, 16px); line-height: 1.45; color: var(--muted); }
+.wline .wsub { margin-top: 6px; }
+.wfit { font-family: var(--f-body); font-size: 11px; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; padding: 3px 9px; border-radius: 999px; border: 1px solid var(--line); }
+.wfit.fits { border-color: var(--acc); color: var(--acc); }
+.wfit.tension { border-color: #974d32; color: #974d32; }
+.whouse { display: flex; flex-direction: column; gap: 8px; }
+.wlayer { display: grid; grid-template-columns: minmax(160px, .5fr) minmax(0, 1.4fr) minmax(0, .6fr); gap: 16px; align-items: baseline; padding: clamp(14px, 1.6vw, 24px); border-radius: 2px; background: var(--cardc); }
+.wlayer.l0 { background: var(--paper-ink); color: #fff; }
+.wlayer.l0 .wsrc { color: #b9b7b2; }
+@media (max-width: 860px) { .wlayer { grid-template-columns: minmax(0, 1fr); } }
+.wlayer .wt { font-family: var(--f-display); font-weight: 300; font-size: clamp(20px, 2.2vw, 36px); line-height: 1.15; }
+.wlayer .wsrc { font-size: 12px; color: var(--muted); }
+body.editing [data-en] { outline: 1px dashed var(--accent); outline-offset: 6px; cursor: text; border-radius: 2px; }
+body.editing [data-en]:hover { outline-style: solid; background: color-mix(in srgb, var(--accent) 8%, transparent); }
+#editbtn[aria-pressed="true"] { background: var(--accent); color: #fff; border-color: var(--accent); }
+.editor { position: fixed; left: 50%; bottom: calc(env(safe-area-inset-bottom, 0px) + 70px); transform: translateX(-50%); width: min(640px, calc(100% - 32px)); z-index: 30; background: #fff; color: #080808; border: 1px solid #dbd9d6; border-radius: 4px; box-shadow: 0 18px 48px rgba(0,0,0,.18); padding: 16px; display: flex; flex-direction: column; gap: 10px; font-family: var(--f-body); }
+.editor .ehead { display: flex; justify-content: space-between; align-items: center; }
+.editor .elbl { font-size: 11px; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; color: var(--accent); }
+.editor .eclose { background: none; border: 0; font-size: 20px; cursor: pointer; color: #444; }
+.editor textarea { font: inherit; font-size: 15px; line-height: 1.45; min-height: 110px; resize: vertical; border: 1px solid #dbd9d6; border-radius: 2px; padding: 10px 12px; color: #080808; background: #fff; }
+.editor textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.editor .eacts { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.editor .ebtn { font: inherit; font-size: 12px; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--accent); background: var(--accent); color: #fff; cursor: pointer; }
+.editor .ebtn.ghost { background: none; color: #444; border-color: #dbd9d6; }
+.editor .ehint { font-size: 12px; color: #737373; margin-left: auto; }
+#ptoast { position: fixed; left: 50%; bottom: calc(env(safe-area-inset-bottom, 0px) + 70px); transform: translateX(-50%); background: #080808; color: #fff; padding: 10px 16px; border-radius: 999px; font-size: 13px; z-index: 40; font-family: var(--f-body); }
 .figs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(10px, 1.2vw, 20px); }
 @media (max-width: 1000px) { .figs { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 560px) { .figs { grid-template-columns: minmax(0, 1fr); } }
@@ -363,6 +405,7 @@ h1, h2 { font-family: var(--f-display); font-weight: 300; letter-spacing: -0.012
 <div class="chrome">
   <div class="kpfoot"><span>© Kontrapunkt</span><span id="folio">1</span></div>
   <div class="right">
+  <button class="why" id="editbtn" hidden aria-pressed="false">Edit ✎</button>
   <button class="why" id="why" aria-expanded="false" aria-controls="drawer">Why? <kbd>W</kbd></button>
   <div class="nav">
     <a href="/index.html" id="explore">Explore the map</a>
@@ -373,13 +416,14 @@ h1, h2 { font-family: var(--f-display); font-weight: 300; letter-spacing: -0.012
   </div>
 </div>
 <div class="progress" id="progress"></div>
+<div class="editor" id="editor" role="dialog" aria-label="Edit text" hidden></div>
 <aside class="drawer" id="drawer" aria-label="Rationale" aria-hidden="true"></aside>
 
 <script>
 (function () {
   const $ = s => document.querySelector(s);
   const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-  let D, byId = {}, down = {}, screens = [], cur = 0, trail = [];
+  let D, byId = {}, down = {}, screens = [], cur = 0, trail = [], WIP = null;
   const TYPE = { proposition: 'Proposition', question: 'Key question', answer: 'Recommendation', principle: 'Principle', insight: 'Insight', territory: 'Territory', evidence: 'Evidence' };
   const TIER = { primary: 'Primary source', tier1: 'Major outlet', trade: 'Trade press', field: 'Founder proof point' };
 
@@ -444,32 +488,33 @@ h1, h2 { font-family: var(--f-display); font-weight: 300; letter-spacing: -0.012
   /* ---------- screens ---------- */
   function render(sc) {
     const o = byId[sc.ref];
+    const S = (sc.wip ? 'wip-' : 'screen-') + sc.id, E = (id, f) => ` data-en="${id}" data-ef="${f}"`;
     const eb = `<div class="eyebrow rise">${esc(sc.eyebrow || '')}</div>`;
     let inner = '';
     switch (sc.kind) {
       case 'cover':
-        inner = `<div class="body"><div class="cover-t rise"><span class="xl gold" style="font-family:var(--f-display)">12Planes</span><h1 class="xl">Insights and Sprint 1</h1></div><p class="lede rise" style="font-family:var(--f-display);font-weight:300;color:var(--ink);max-width:40ch">${esc(o.text)}</p></div>`; break;
+        inner = `<div class="body"><div class="cover-t rise"><span class="xl gold" style="font-family:var(--f-display)">12Planes</span><h1 class="xl">Insights and Sprint 1</h1></div><p class="lede rise"${E('Q1', 'text')} style="font-family:var(--f-display);font-weight:300;color:var(--ink);max-width:40ch">${esc(o.text)}</p></div>`; break;
       case 'statement':
-        inner = `<div class="body"><h1 class="lg rise">${esc(o.headline)}</h1><p class="lede rise">${esc(o.body)}</p></div>`; break;
+        inner = `<div class="body"><h1 class="lg rise"${E(o.id, 'headline')}>${esc(o.headline)}</h1><p class="lede rise"${E(o.id, 'body')}>${esc(o.body)}</p></div>`; break;
       case 'stat': {
         const e = byId[sc.evidence];
         inner = `<div class="body"><div class="big rise">${esc(sc.value)}</div><h2 class="md rise">${esc(sc.headline)}</h2><p class="lede rise">${esc(sc.sub)}</p><div class="rise">${srcLine(e)}</div></div>`; break;
       }
       case 'claims':
-        inner = `<div class="body"><h1 class="lg rise">${esc(sc.headline)}</h1>${sc.sub ? `<p class="lede rise">${esc(sc.sub)}</p>` : ''}
+        inner = `<div class="body"><h1 class="lg rise"${E(S, 'headline')}>${esc(sc.headline)}</h1>${sc.sub ? `<p class="lede rise"${E(S, 'sub')}>${esc(sc.sub)}</p>` : ''}
           <div class="row rise">${sc.items.map(id => { const e = byId[id]; return `<div class="cell"><span class="who">${esc(e.brand)}</span><span class="say">“${esc(e.claim || e.text)}”</span></div>`; }).join('')}</div></div>`; break;
       case 'parts':
-        inner = `<div class="body"><h1 class="lg rise">${esc(sc.headline)}</h1>
+        inner = `<div class="body"><h1 class="lg rise"${E(S, 'headline')}>${esc(sc.headline)}</h1>
           <div class="row rise">${sc.items.map(([w, p], i) => `<div class="cell ${i === sc.items.length - 1 ? 'us' : ''}"><span class="who">${esc(w)}</span><span class="say">${esc(p)}</span></div>`).join('')}</div></div>`; break;
       case 'shifts':
-        inner = `<div class="body"><h1 class="md rise">${esc(sc.headline)}</h1>
+        inner = `<div class="body"><h1 class="md rise"${E(S, 'headline')}>${esc(sc.headline)}</h1>
           <div class="shifts rise"><div class="head">Traditional cybersecurity</div><div class="head"></div><div class="head">A new category</div>
           ${D.shifts.rows.map(r => `<div class="from">${esc(r.from)}</div><div class="arrow">→</div><div class="to">${esc(r.to)}</div>`).join('')}</div></div>`; break;
       case 'principles':
-        inner = `<div class="body"><h1 class="md rise">${esc(sc.headline)}</h1>
-          <div class="plist rise">${D.principles.map((p, i) => `<div><span class="n">0${i + 1}</span><span class="h">${esc(p.headline)}</span><span class="d">${esc(p.body)}</span></div>`).join('')}</div></div>`; break;
+        inner = `<div class="body"><h1 class="md rise"${E(S, 'headline')}>${esc(sc.headline)}</h1>
+          <div class="plist rise">${D.principles.map((p, i) => `<div><span class="n">0${i + 1}</span><span class="h"${E(p.id, 'headline')}>${esc(p.headline)}</span><span class="d"${E(p.id, 'body')}>${esc(p.body)}</span></div>`).join('')}</div></div>`; break;
       case 'figures':
-        inner = `<div class="body"><h1 class="md rise">${esc(sc.headline)}</h1>
+        inner = `<div class="body"><h1 class="md rise"${E(S, 'headline')}>${esc(sc.headline)}</h1>
           <div class="figs rise">${sc.items.map(f => `<div class="fig" tabindex="0" role="button" aria-label="${esc(f.label)}: ${esc(f.value)}">
             <span class="lab">${esc(f.label)}</span><span class="val">${esc(f.value)}</span><span class="cap">${esc(f.caption)}</span>
             <span class="hint">Hover to learn more</span>
@@ -478,15 +523,39 @@ h1, h2 { font-family: var(--f-display); font-weight: 300; letter-spacing: -0.012
         const P = D.proposition;
         inner = `<div class="body"><h1 class="lg rise">${esc(P.headline)}</h1><p class="lede rise">${esc(P.sub)}</p>
           <div class="propg rise">${P.items.map((p, k) => `<div class="prop"><div style="display:flex;justify-content:space-between;align-items:center"><span class="num">${k + 1}</span><span class="stg">${esc(p.stage)}</span></div>
-            <h2>${esc(p.name)}</h2><p>${esc(p.body)}</p>
+            <h2${E(p.id, 'name')}>${esc(p.name)}</h2><p${E(p.id, 'body')}>${esc(p.body)}</p>
             <div class="tags">${p.insights.slice(0, 2).map(i => `<button class="tag" data-why="${i}">${esc(byId[i].headline)} ↗</button>`).join('')}</div></div>`).join('')}</div></div>`; break;
       }
+      case 'wipHier': {
+        inner = `<div class="body"><h1 class="md rise"${E(S, 'headline')}>${esc(sc.headline)}</h1>
+          <div class="wgrid rise">${sc.pillars.map((p, k) => `<div class="wcard"><span class="wn">0${k + 1} · ${esc(p.n)}</span><h3>${esc(p.h)}</h3><p>${esc(p.b)}</p>
+            <span class="wread">${esc(p.read)}</span><div class="tags">${p.links.filter(i => byId[i]).map(i => `<button class="tag" data-why="${i}">${esc(byId[i].headline || byId[i].name)} ↗</button>`).join('')}</div></div>`).join('')}</div></div>`; break;
+      }
+      case 'wipNarr':
+        inner = `<div class="body"><h1 class="lg rise"${E(S, 'headline')}>${esc(sc.headline)}</h1>
+          <div class="wgrid three rise">${sc.cols.map(([h, t]) => `<div class="wcard"><span class="wn">${esc(h)}</span><p style="color:var(--ink);font-size:clamp(15px,1.2vw,18px)">${esc(t)}</p></div>`).join('')}</div>
+          <p class="wnote rise">${esc(sc.read)}</p></div>`; break;
+      case 'wipLines':
+        inner = `<div class="body"><h1 class="md rise"${E(S, 'headline')}>${esc(sc.headline)}</h1>
+          <div class="wlines rise">${sc.lines.map(l => `<div class="wline"><div><span class="wfit ${l.fit}">${l.fit === 'fits' ? 'Fits the strategy' : l.fit === 'tension' ? 'In tension' : 'Partial fit'}</span>
+            <h3>“${esc(l.t)}”</h3>${l.s ? `<p class="wsub">${esc(l.s)}</p>` : ''}</div><div><p>${esc(l.read)}</p><div class="tags">${l.links.filter(i => byId[i]).map(i => `<button class="tag" data-why="${i}">${esc(byId[i].headline || byId[i].name || 'Evidence')} ↗</button>`).join('')}</div></div></div>`).join('')}</div></div>`; break;
+      case 'wipOne':
+        inner = `<div class="body"><h1 class="md rise"${E(S, 'headline')}>${esc(sc.headline)}</h1>
+          <div class="wgrid rise">${sc.groups.map(g => `<div class="wcard"><span class="wn">${esc(g.g)}</span>${g.items.map(t => `<span class="wone">${esc(t)}</span>`).join('')}<span class="wread" style="margin-top:auto">${esc(g.note)}</span></div>`).join('')}</div></div>`; break;
+      case 'wipManifesto':
+        inner = `<div class="body"><div class="story">
+          <div style="display:flex;flex-direction:column;gap:20px;min-width:0"><h1 class="md rise"${E(S, 'headline')}>${esc(sc.headline)}</h1><p class="lede rise" style="color:var(--ink)"${E(S, 'text')}>${esc(sc.text)}</p></div>
+          <div class="sr rise"><h4>Our read</h4>${sc.read.map(r => `<p style="font-size:clamp(14px,1.15vw,17px)">${esc(r)}</p>`).join('')}<div class="tags">${sc.links.filter(i => byId[i]).map(i => `<button class="tag" data-why="${i}">${esc(byId[i].headline || byId[i].name)} ↗</button>`).join('')}</div></div></div></div>`; break;
+      case 'wipHouse':
+        inner = `<div class="body"><h1 class="lg rise"${E(S, 'headline')}>${esc(sc.headline)}</h1>
+          <div class="whouse rise">${sc.layers.map(([lvl, role, txt, src2], k) => `<div class="wlayer l${k}"><span class="wn">${esc(lvl)} · ${esc(role)}</span><span class="wt">${esc(txt)}</span><span class="wsrc">${esc(src2)}</span></div>`).join('')}</div>
+          <p class="wnote rise">${esc(sc.note)}</p></div>`; break;
       case 'chapter':
-        inner = `<div class="body"><h1 class="xl rise">${esc(sc.headline)}</h1><p class="lede rise">${esc(sc.sub)}</p>
-          <div class="povg rise">${live().map((t, i) => `<button data-goto="t${i + 1}a"><img src="${esc(t.image)}" alt="" loading="lazy"><span class="k">${esc(t.direction)}</span><span class="h">${esc(t.name)}</span></button>`).join('')}</div></div>`; break;
+        inner = `<div class="body"><h1 class="xl rise"${E(S, 'headline')}>${esc(sc.headline)}</h1><p class="lede rise"${E(S, 'sub')}>${esc(sc.sub)}</p>
+          ${sc.wip ? '' : `<div class="povg rise">${live().map((t, i) => `<button data-goto="t${i + 1}a"><img src="${esc(t.image)}" alt="" loading="lazy"><span class="k">${esc(t.direction)}</span><span class="h">${esc(t.name)}</span></button>`).join('')}</div>`}</div>`; break;
       case 'matrix': {
         const T = live();
-        inner = `<div class="body"><h1 class="md rise">${esc(sc.headline)}</h1>
+        inner = `<div class="body"><h1 class="md rise"${E(S, 'headline')}>${esc(sc.headline)}</h1>
           <div class="matrix rise">
             <div class="mt">
               <div class="mrow head"><span style="text-align:left">Brand job</span>${T.map(t => `<span>${esc(t.name.replace('The ', ''))}</span>`).join('')}</div>
@@ -501,8 +570,8 @@ h1, h2 { font-family: var(--f-display); font-weight: 300; letter-spacing: -0.012
         inner = `<div class="body"><div class="arch2">
           <div class="hero">
             <span class="aname rise">${esc(o.name)}</span>
-            <h1 class="xl rise">${esc(o.enables || o.role)}</h1>
-            <p class="line rise">“${esc(o.line)}”${o.supportingLine ? ` <span style="opacity:.75">${esc(o.supportingLine)}</span>` : ''}</p>
+            <h1 class="xl rise"${E(o.id, 'enables')}>${esc(o.enables || o.role)}</h1>
+            <p class="line rise"${E(o.id, 'line')}>“${esc(o.line)}”${o.supportingLine ? ` <span style="opacity:.75">${esc(o.supportingLine)}</span>` : ''}</p>
             <div class="rise"><button class="tag unpack" data-unpack aria-expanded="false">Unpack what it answers ↓</button></div>
           </div>
           <div class="more" hidden>
@@ -530,18 +599,18 @@ h1, h2 { font-family: var(--f-display); font-weight: 300; letter-spacing: -0.012
           <div style="display:flex;flex-direction:column;gap:24px;min-width:0">
             <h1 class="md rise">${esc(o.name)}</h1>
             ${q ? `<blockquote class="rise">“${esc(q.text)}”<span>Naor Penso, Co-founder and CTO</span></blockquote>` : ''}
-            <p class="lede rise">${esc(o.idea)}</p>
+            <p class="lede rise"${E(o.id, 'idea')}>${esc(o.idea)}</p>
           </div>
           <div class="sr rise">
-            <div><h4>Where it is strongest</h4><p>${esc(o.strongest)}</p></div>
-            <div><h4 class="risk">Where it is at risk</h4><p>${esc(o.risk)}</p></div>
+            <div><h4>Where it is strongest</h4><p${E(o.id, 'strongest')}>${esc(o.strongest)}</p></div>
+            <div><h4 class="risk">Where it is at risk</h4><p${E(o.id, 'risk')}>${esc(o.risk)}</p></div>
             <div><h4 style="color:var(--muted)">Against the seven jobs</h4><div class="score">${D.brandJobs.map(j => `<div>${dot(ans(o, j.id).strength)}<span>${esc(j.job)}</span></div>`).join('')}</div></div>
           </div></div></div>`; break;
       }
       case 'nameIntro': {
         const N = D.nameExploration;
         inner = `<div class="body"><div class="nm-intro">
-          <div style="display:flex;flex-direction:column;gap:22px;min-width:0"><h1 class="lg rise">${esc(N.question)}</h1><p class="lede rise">${esc(N.origin)}</p>
+          <div style="display:flex;flex-direction:column;gap:22px;min-width:0"><h1 class="lg rise"${E('name', 'question')}>${esc(N.question)}</h1><p class="lede rise"${E('name', 'origin')}>${esc(N.origin)}</p>
 </div>
           <div class="rise" style="display:flex;flex-direction:column;gap:14px;min-width:0"><div class="wm"><img src="${esc(N.images.wordmarks)}" alt="Wordmark sketches for .99, point99 and P99"></div><img src="${esc(N.images.mockup)}" alt=".99 on a brushed-metal tile next to the 12 Planes website" loading="lazy"></div>
         </div></div>`; break;
@@ -574,7 +643,7 @@ h1, h2 { font-family: var(--f-display); font-weight: 300; letter-spacing: -0.012
       }
       case 'pov': {
         const p = D.pov;
-        inner = `<div class="body"><h1 class="lg rise">${esc(p.headline)}</h1><p class="lede rise">${esc(p.body)}</p>
+        inner = `<div class="body"><h1 class="lg rise"${E('pov', 'headline')}>${esc(p.headline)}</h1><p class="lede rise"${E('pov', 'body')}>${esc(p.body)}</p>
           <div class="povg rise">${p.parts.map(([tid, k, h]) => { const t = byId[tid]; return `<button data-goto="${tid === 'T1' ? 't1a' : tid === 'T2' ? 't2a' : 't3a'}"><img src="${esc(t.image)}" alt="" loading="lazy"><span class="k">${esc(k)} · ${esc(t.name)}</span><span class="h">${esc(h)}</span></button>`; }).join('')}</div>
           <p class="lede rise" style="font-size:14px">${esc(p.note)}</p></div>`; break;
       }
@@ -583,11 +652,12 @@ h1, h2 { font-family: var(--f-display); font-weight: 300; letter-spacing: -0.012
           <div class="steps rise">${sc.steps.map(([h, d, p], i) => `<div class="step"><span class="k">0${i + 1}</span><span class="h">${esc(h)}</span><span class="d">${esc(d)}</span><span class="p">Product · ${esc(p)}</span></div>`).join('')}</div>
           <p class="lede rise" style="font-size:14px">${esc(o.note || '')}</p></div>`; break;
       case 'ask':
-        inner = `<div class="body"><h1 class="xl rise">${esc(sc.headline)}</h1><p class="lede rise">${esc(sc.sub)}</p>
+        inner = `<div class="body"><h1 class="xl rise"${E(S, 'headline')}>${esc(sc.headline)}</h1><p class="lede rise"${E(S, 'sub')}>${esc(sc.sub)}</p>
           <div class="row rise">${D.territories.filter(t => t.status !== 'parked').map(t => { const sc2 = screens.find(x => x.kind === 'archetype' && x.ref === t.id); return `<button class="cell golink" data-goto="${sc2 ? sc2.id : ''}"><span class="who">${esc(t.direction)}</span><span class="say">${esc(t.name)}</span><span class="go">Go to the chapter →</span></button>`; }).join('')}</div></div>`; break;
     }
     const bottom = ['cover', 'chapter', 'statement', 'ask'].includes(sc.kind) ? 'k-bottom' : '';
-    return `<section class="screen ${sc.tone === 'dark' ? 'dark' : ''} ${bottom}" id="${sc.id}" aria-roledescription="slide">${eb}${inner}</section>`;
+    const badge = sc.wip ? '<span class="wipbadge">Work in progress · Team only</span>' : '';
+    return `<section class="screen ${sc.tone === 'dark' ? 'dark' : ''} ${bottom} ${sc.wip ? 'is-wip' : ''}" id="${sc.id}" aria-roledescription="slide">${badge}${eb}${inner}</section>`;
   }
 
   function go(i, push = true) {
@@ -647,14 +717,83 @@ h1, h2 { font-family: var(--f-display); font-weight: 300; letter-spacing: -0.012
     // Kontrapunkt headlines: no full stop after a single-sentence headline
     document.querySelectorAll('.screen h1, .screen h2').forEach(h => { const n = h.lastChild; if (n && n.nodeType === 3) { const t = n.textContent.trimEnd(); if (t.endsWith('.') && !/\.\s/.test(h.textContent.trim().slice(0, -1))) n.textContent = t.slice(0, -1); } });
   }
+  const ED = { db: null, uid: null, role: 'read', guest: false, overrides: {}, content: {}, on: false, open: null };
+  function target(id) {
+    if (byId[id]) return byId[id];
+    if (id === 'pov') return D.pov;
+    if (id === 'name') return D.nameExploration;
+    if (id.startsWith('screen-')) return screens.find(x => x.id === id.slice(7));
+    if (id.startsWith('wip-')) return screens.find(x => x.id === id.slice(4));
+    return null;
+  }
+  function applyContent() {
+    Object.entries(ED.content).forEach(([id, d]) => { const o = target(id), f = d && d.fields; if (!o || !f) return; Object.assign(o, f); if (o._type === 'proposition' && f.name) o.headline = f.name; });
+  }
+  const edMode = () => ED.role;
+  function repaint() {
+    const keep = cur, drawerOpen = $('#drawer').classList.contains('open');
+    paint(); go(keep, false);
+    if (drawerOpen) { trail = []; drawer(screens[keep].ref); }
+  }
+  function renderEditBtn() {
+    const b = $('#editbtn'); if (!b) return;
+    const m = edMode(); b.hidden = m === 'read';
+    b.textContent = ED.on ? 'Done editing' : (m === 'edit' ? 'Edit ✎' : 'Suggest ✎');
+    b.setAttribute('aria-pressed', String(ED.on));
+    document.body.classList.toggle('editing', ED.on);
+  }
+  function toastP(msg) {
+    let t = $('#ptoast'); if (!t) { t = document.createElement('div'); t.id = 'ptoast'; t.setAttribute('role', 'status'); document.body.appendChild(t); }
+    t.textContent = msg; t.hidden = false; clearTimeout(t._t); t._t = setTimeout(() => { t.hidden = true; }, 2600);
+  }
+  const LABELS = { headline: 'headline', body: 'text', sub: 'subline', text: 'text', name: 'name', enables: 'what it enables', line: 'lead line', idea: 'idea', strongest: 'where it is strongest', risk: 'where it is at risk', question: 'question', origin: 'text' };
+  function openEditor(id, f) {
+    const o = target(id); if (!o) return;
+    ED.open = { id, f };
+    const m = edMode(), p = $('#editor');
+    p.innerHTML = `<div class="ehead"><span class="elbl">${m === 'edit' ? 'Edit' : 'Suggest a change to'} the ${esc(LABELS[f] || f)}</span><button class="eclose" data-ecancel aria-label="Close">×</button></div>
+      <textarea id="etext" aria-label="New text">${esc(o[f] || '')}</textarea>
+      <div class="eacts"><button class="ebtn" data-esave>${m === 'edit' ? 'Save for everyone' : 'Send suggestion'}</button><button class="ebtn ghost" data-ecancel>Cancel</button>
+      <span class="ehint">${m === 'edit' ? 'Changes show for everyone straight away.' : 'The Kontrapunkt team reviews your suggestion.'}</span></div>`;
+    p.hidden = false; const t = $('#etext'); t.focus(); t.setSelectionRange(t.value.length, t.value.length);
+  }
+  function closeEditor() { ED.open = null; $('#editor').hidden = true; }
+  async function saveEditor() {
+    if (!ED.open) return;
+    const { id, f } = ED.open; const o = target(id); const from = o ? (o[f] || '') : ''; const to = $('#etext').value.trim();
+    closeEditor();
+    if (!to || to === from) return;
+    try {
+      if (edMode() === 'suggest') {
+        await ED.db.collection('suggestions').add({ node: id, field: f, from, to, by: ED.uid, at: Date.now(), state: 'open' });
+        toastP('Suggestion sent to the team');
+      } else {
+        const prev = (ED.content[id] && ED.content[id].fields) || {};
+        await ED.db.doc('content/' + id).set({ fields: { ...prev, [f]: to }, updatedBy: ED.uid, updatedAt: Date.now() });
+        await ED.db.collection('log').add({ node: id, field: f, from, to, by: ED.uid, at: Date.now(), kind: 'edit' });
+        ED.content[id] = { fields: { ...prev, [f]: to } }; applyContent(); repaint();
+        toastP('Saved for everyone');
+      }
+    } catch (e) { toastP(e && e.code === 'invalid_argument' ? 'You don’t have permission to change this' : 'That didn’t save. Try again.'); }
+  }
   async function startLive() {
     if (!window.claude || !window.claude.use) return;
-    const db = await window.claude.use('db'); if (!db) return;
+    const [db, user] = await Promise.all([window.claude.use('db'), window.claude.use('user')]);
+    if (!db) return;
+    ED.db = db;
+    let canWrite = null;
+    if (user) {
+      const me = await user.me(); ED.uid = me.id;
+      canWrite = await user.can('data.write');
+      if (ED.uid) { const ps = await user.profiles([ED.uid]); ED.guest = !!(ps[ED.uid] && ps[ED.uid].guest); }
+    }
+    const decide = () => (canWrite === false || !ED.uid) ? 'read' : (ED.overrides[ED.uid] || (ED.guest ? 'suggest' : 'edit'));
+    ED.role = decide(); renderEditBtn();
+    db.doc('config/people').onSnapshot(sn => { ED.overrides = ((sn.exists && sn.data()) || {}).overrides || {}; ED.role = decide(); if (ED.role === 'read') ED.on = false; renderEditBtn(); }, () => {});
     db.collection('content').onSnapshot(snap => {
-      snap.docs.forEach(d => { const o = byId[d.id], f = (d.data() || {}).fields; if (!o || !f) return; Object.assign(o, f); if (o._type === 'proposition' && f.name) o.headline = f.name; });
-      const keep = cur, drawerOpen = $('#drawer').classList.contains('open');
-      paint(); go(keep, false);
-      if (drawerOpen) { trail = []; drawer(screens[keep].ref); }
+      const next = {}; snap.docs.forEach(d => { next[d.id] = d.data(); });
+      if (JSON.stringify(next) === JSON.stringify(ED.content)) return;
+      ED.content = next; applyContent(); if (!ED.open) repaint();
     }, () => {});
   }
 
@@ -663,7 +802,10 @@ h1, h2 { font-family: var(--f-display); font-weight: 300; letter-spacing: -0.012
     $('#next').addEventListener('click', () => go(cur + 1));
     $('#prev').addEventListener('click', () => go(cur - 1));
     $('#why').addEventListener('click', toggleDrawer);
+    $('#editbtn').addEventListener('click', () => { ED.on = !ED.on; if (!ED.on) closeEditor(); renderEditBtn(); });
+    $('#editor').addEventListener('click', e => { if (e.target.closest('[data-esave]')) saveEditor(); else if (e.target.closest('[data-ecancel]')) closeEditor(); });
     $('#stage').addEventListener('click', e => {
+      if (ED.on) { const en = e.target.closest('[data-en]'); if (en) { e.preventDefault(); e.stopPropagation(); openEditor(en.dataset.en, en.dataset.ef); return; } }
       const w = e.target.closest('[data-why]');
       if (w) { trail = []; drawer(w.dataset.why); $('#drawer').classList.add('open'); $('#drawer').setAttribute('aria-hidden', 'false'); $('#why').setAttribute('aria-expanded', 'true'); return; }
       const g = e.target.closest('[data-goto]');
@@ -679,6 +821,7 @@ h1, h2 { font-family: var(--f-display); font-weight: 300; letter-spacing: -0.012
       if (h) setHotspot(h.closest('.screen'), +h.dataset.hs);
     });
     document.addEventListener('keydown', e => {
+      if (e.target.closest && e.target.closest('textarea, input')) { if (e.key === 'Escape') closeEditor(); if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) saveEditor(); return; }
       if (e.metaKey || e.ctrlKey || e.altKey) return;
       const k = e.key;
       if (k === 'ArrowRight' || k === 'PageDown' || (k === ' ' && !e.shiftKey)) { e.preventDefault(); go(cur + 1); }
@@ -696,7 +839,10 @@ h1, h2 { font-family: var(--f-display); font-weight: 300; letter-spacing: -0.012
   }
 
   fetch('strategy.json').then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }).then(d => {
-    D = d; index(); screens = D.present.screens;
+    D = d; index(); screens = D.present.screens.slice();
+    return fetch('wip.json', { credentials: 'same-origin' }).then(r => r.ok ? r.json() : null).catch(() => null);
+  }).then(w => {
+    if (w && Array.isArray(w.screens)) { WIP = w; screens = screens.concat(w.screens); }
     paint();
     wire();
     const i = screens.findIndex(s => s.id === location.hash.slice(1));

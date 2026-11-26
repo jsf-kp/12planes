@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "title": "Narrative and messaging",
+    "status": "Work in progress · team only",
+    "source": "Kontrapunkt narrative and brand core work (WIP), messaging section, 26 Nov 2026"
+  },
+  "screens": [
+    {
+      "id": "w0",
+      "kind": "chapter",
+      "wip": true,
+      "tone": "dark",
+      "eyebrow": "Work in progress · Team only",
+      "headline": "Narrative and messaging",
+      "sub": "Drafts from the narrative work, not ready for the client. Each piece is read against the strategy, so we can see where it holds and where it drifts."
+    },
+    {
+      "id": "w1",
+      "kind": "wipHier",
+      "wip": true,
+      "ref": "A1",
+      "eyebrow": "WIP · Messaging hierarchy",
+      "headline": "12 Planes helps you see what’s coming across your infrastructure, understand what it means and decide how to act.",
+      "pillars": [
+        {
+          "n": "Clarity",
+          "h": "Give every team the context to act with confidence",
+          "b": "Connect cooling, power, compute workloads and security into one live picture. When everyone sees the same operational reality, teams move faster and decide on facts rather than assumptions.",
+          "links": [
+            "P2",
+            "I-i2"
+          ],
+          "read": "Carries “answer for the whole”."
+        },
+        {
+          "n": "Calm",
+          "h": "Turn complex telemetry into a clear next step",
+          "b": "A temperature spike in a water chiller shouldn’t trigger an emergency meeting across five departments. 12 Planes isolates the root cause and sends clear instructions to the operator on shift before performance drops.",
+          "links": [
+            "P3",
+            "I-c2"
+          ],
+          "read": "Carries “confidence, not fear”."
+        },
+        {
+          "n": "Trust",
+          "h": "Meet enterprise security requirements on demand",
+          "b": "Tier-one enterprise buyers and AI labs want rigorous operational proof before they commit. Satisfy compliance and security audits instantly, and turn your infrastructure’s credibility into a sales advantage.",
+          "links": [
+            "P1",
+            "PR1"
+          ],
+          "read": "Carries “earn it in public” and Protect."
+        },
+        {
+          "n": "Enablement",
+          "h": "Unlock the full earning potential of your compute",
+          "b": "Silent hardware degradation and preventable downtime drain revenue from gigawatt builds. With continuous visibility, hardware runs harder, SLAs stay protected and every megawatt delivers its full return.",
+          "links": [
+            "PR2",
+            "PR3"
+          ],
+          "read": "Carries Perform and Progress."
+        }
+      ]
+    },
+    {
+      "id": "w2",
+      "kind": "wipNarr",
+      "wip": true,
+      "ref": "A1",
+      "eyebrow": "WIP · Narrative",
+      "headline": "What is 12 Planes",
+      "cols": [
+        [
+          "What it is",
+          "We built 12 Planes to give AI data centers a brain. One connected system that sees across physical infrastructure, compute workloads and security, so operators understand what’s happening, what’s about to happen and, most importantly, what to do about it."
+        ],
+        [
+          "How it works",
+          "We connect signals from existing systems (cooling, power, hardware, networks and software) into a single operational model. When something changes, we trace the impact across the whole environment before it becomes a problem. The right information reaches the right person, in time to act."
+        ],
+        [
+          "Why it’s different",
+          "Most tools see one piece of the data center. We see how the pieces affect each other. Downtime gets caught before it costs you. Incidents that took multiple teams and long bridge calls get resolved faster. Compliance that takes months becomes something you can show on demand. For neoclouds building at speed, that’s the credibility that unlocks enterprise contracts and the confidence to run at full speed."
+        ]
+      ],
+      "read": "Strong and concrete at product level. It describes what 12 Planes does more than the new age it opens, so it sits under The Foundation rather than replacing it."
+    },
+    {
+      "id": "w3",
+      "kind": "wipLines",
+      "wip": true,
+      "ref": "T3",
+      "eyebrow": "WIP · Lead lines",
+      "headline": "Four lead lines, read against the strategy",
+      "lines": [
+        {
+          "t": "Know what happens next.",
+          "s": "12 Planes brings intelligence to every layer of your infrastructure, turning operational events into immediate and unambiguous action.",
+          "fit": "fits",
+          "read": "The narrative work’s favourite. Calm and confident, and grounded in the operator’s main job. More product than ambition, so it works best as the line under “A new age for AI”.",
+          "links": [
+            "P3",
+            "I-c2"
+          ]
+        },
+        {
+          "t": "Trust is built from the ground to the token.",
+          "s": "",
+          "fit": "fits",
+          "read": "The closest to The Foundation: ground, trust and the whole stack in one line. A strong candidate for the brand line itself.",
+          "links": [
+            "T3",
+            "P2"
+          ]
+        },
+        {
+          "t": "In data centers, incidents are inevitable. Uncertainty doesn’t have to be.",
+          "s": "",
+          "fit": "tension",
+          "read": "Opens on the threat. It conflicts with “confidence, not fear” and Naor’s dislike of the fear narrative. Better as campaign copy than a lead line.",
+          "links": [
+            "P3",
+            "E-naor-03"
+          ]
+        },
+        {
+          "t": "We bring intelligence to every layer, turning operational events into immediate, unambiguous action.",
+          "s": "So when an incident happens, the next move is clear.",
+          "fit": "partial",
+          "read": "A clear description rather than a line. Use it as supporting copy.",
+          "links": [
+            "P4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w4",
+      "kind": "wipOne",
+      "wip": true,
+      "ref": "T3",
+      "eyebrow": "WIP · One-liners",
+      "headline": "Fifteen one-liners in four families",
+      "groups": [
+        {
+          "g": "Seeing everything",
+          "note": "Carries clarity. Safe, but the category is full of “visibility” claims.",
+          "items": [
+            "Now you see!",
+            "When you see everything. Nothing will surprise you.",
+            "Cannot be unseen.",
+            "The only thing that lets you see every single layer.",
+            "Everything, connected, finally."
+          ]
+        },
+        {
+          "g": "The nines",
+          "note": "Ownable and specific to the category. Ties directly to the .99 name question.",
+          "items": [
+            "Add a nine. Save nine zeroes.",
+            "Your biggest savings hide in your decimals.",
+            "The power of the point. How .001 might save you 1bn",
+            "The infinite possibility between .99 and 1"
+          ]
+        },
+        {
+          "g": "Confidence and speed",
+          "note": "Carries confidence, not fear. “Move fast and break nothing” plays on a well-known Facebook motto, so check it is the right association.",
+          "items": [
+            "Move fast and break nothing",
+            "Ready before you are.",
+            "12 Planes: The only way to know what happens next."
+          ]
+        },
+        {
+          "g": "The category",
+          "note": "The most ambitious family, closest to “a new age for AI”. “OS” may set software expectations the product doesn’t meet yet.",
+          "items": [
+            "Finally an OS for the most critical infrastructure on Earth.",
+            "The OS for Earth’s most critical infrastructure."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w5",
+      "kind": "wipManifesto",
+      "wip": true,
+      "ref": "Q1",
+      "eyebrow": "WIP · Manifesto sketch",
+      "headline": "For decades, we built around the blind spots.",
+      "text": "We fenced off the parts of our infrastructure we didn’t fully understand and just hoped they wouldn’t fight each other. When things broke (as things inevitably do), we didn’t have a plan. We had bridge calls and qualified guesses. 12 Planes erases those fences. We connect physical infrastructure, compute and security into one intelligent foundation that turns noise into action. No more guesswork. Just absolute clarity on what’s happening and what happens next. The outcome is infinitely more than an upgrade to your data center. It’s a new world of operational cool. The next era of AI infrastructure intelligence.",
+      "read": [
+        "“Erases those fences” is the strongest idea here. It is the interviews’ shift from guarding the perimeter to securing the origin, in the client’s own story.",
+        "“One intelligent foundation” links straight to The Foundation. Worth keeping.",
+        "“Operational cool” is off the calm, Scandinavian tone the founders asked for."
+      ],
+      "links": [
+        "I-i1",
+        "T3",
+        "I-c2"
+      ]
+    },
+    {
+      "id": "w6",
+      "kind": "wipHouse",
+      "wip": true,
+      "ref": "A1",
+      "eyebrow": "WIP · How it fits together",
+      "headline": "From ambition to proof, in three layers",
+      "layers": [
+        [
+          "Brand line",
+          "The ambition",
+          "A new age for AI",
+          "From the strategy: The Foundation"
+        ],
+        [
+          "Lead line",
+          "The promise",
+          "Know what happens next. / Trust is built from the ground to the token.",
+          "From the narrative work"
+        ],
+        [
+          "Pillars",
+          "The proof",
+          "Clarity · Calm · Trust · Enablement",
+          "From the messaging hierarchy"
+        ]
+      ],
+      "note": "Our read: the messaging is strong at the operator level and the strategy is strong at the ambition level. Layered, they don’t compete. To decide as a team before anything goes to the client."
+    }
+  ]
+}
