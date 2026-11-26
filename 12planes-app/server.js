@@ -252,7 +252,7 @@ const server = http.createServer(async (req, res) => {
     const p = await currentUser(req);
     if (url.pathname.startsWith('/api/')) return p ? await api(req, res, url, p) : json(res, 401, { error: 'signed_out' });
     if (!p) { res.writeHead(302, { location: '/login.html' }); return res.end(); }
-    if (url.pathname === '/') return serveFile(res, '/start.html');
+    if (url.pathname === '/') return serveFile(res, '/index.html');
     if (url.pathname === '/admin.html' && !p.admin) { res.writeHead(302, { location: '/' }); return res.end(); }
     return serveFile(res, url.pathname);
   } catch (e) {
