@@ -11,13 +11,19 @@ const store = require('./store');
 const PORT = Number(process.env.PORT || 8080);
 const SECRET = process.env.SESSION_SECRET || (console.warn('[warn] SESSION_SECRET not set; sessions reset on restart'), crypto.randomBytes(32).toString('hex'));
 const APP_URL = process.env.APP_URL || `http://localhost:${PORT}`;
-const MAIL_FROM = process.env.MAIL_FROM || '';
+const MAIL_FROM = String(process.env.MAIL_FROM || '').trim().replace(/^["']+|["']+$/g, '');
 const MAIL_FROM_NAME = process.env.MAIL_FROM_NAME || 'Kontrapunkt';
-const BREVO_KEY = process.env.BREVO_API_KEY || '';
+const clean = v => String(v || '').trim().replace(/^["']+|["']+$/g, '').trim();
+const BREVO_KEY = clean(process.env.BREVO_API_KEY);
+if (BREVO_KEY) console.log(`[mail] Brevo key loaded: starts ${BREVO_KEY.slice(0, 8)}…, ${BREVO_KEY.length} characters${BREVO_KEY.startsWith('xkeysib-') ? '' : ' · WARNING: an API key starts with xkeysib-'}`);
 const DEV = !BREVO_KEY; // without a mail key, codes are printed to the server log (local testing only)
 const SECURE = APP_URL.startsWith('https://');
 const PUB = path.join(__dirname, 'public');
 const SESSION_DAYS = 30;
+const PW = { team: String(process.env.TEAM_PASSWORD || '').trim(), client: String(process.env.CLIENT_PASSWORD || '').trim() };
+if (!PW.team || !PW.client) console.warn('[warn] TEAM_PASSWORD and CLIENT_PASSWORD must both be set for password sign-in');
+// a short fingerprint of each password, stored in the session, so changing a password signs everyone with it out
+const pwv = role => PW[role] ? hmac('pw:' + role + ':' + PW[role]).slice(0, 12) : 'none';
 
 // ---------- helpers ----------
 const hmac = s => crypto.createHmac('sha256', SECRET).update(s).digest('base64url');
@@ -41,8 +47,8 @@ function cookies(req) {
   (req.headers.cookie || '').split(';').forEach(p => { const i = p.indexOf('='); if (i > 0) out[p.slice(0, i).trim()] = decodeURIComponent(p.slice(i + 1).trim()); });
   return out;
 }
-function sessionCookie(uid) {
-  const payload = Buffer.from(JSON.stringify({ uid, exp: Date.now() + SESSION_DAYS * 864e5 })).toString('base64url');
+function sessionCookie(uid, role) {
+  const payload = Buffer.from(JSON.stringify({ uid, pv: role ? pwv(role) : null, exp: Date.now() + SESSION_DAYS * 864e5 })).toString('base64url');
   return `kp12=${payload}.${hmac(payload)}; Path=/; HttpOnly; SameSite=Lax; Max-Age=${SESSION_DAYS * 86400}${SECURE ? '; Secure' : ''}`;
 }
 async function currentUser(req) {
@@ -54,7 +60,9 @@ async function currentUser(req) {
   let s; try { s = JSON.parse(Buffer.from(payload, 'base64url').toString()); } catch (_) { return null; }
   if (!s.uid || s.exp < Date.now()) return null;
   const p = await store.personById(s.uid);
-  return p && p.active ? p : null;
+  if (!p || !p.active) return null;
+  if (s.pv && s.pv !== pwv(p.role)) return null; // password changed since sign-in
+  return p;
 }
 
 // simple in-memory rate limit
@@ -183,6 +191,22 @@ async function api(req, res, url, p) {
 // ---------- auth ----------
 async function auth(req, res, url) {
   const ip = (req.headers['x-forwarded-for'] || req.socket.remoteAddress || '').split(',')[0].trim();
+  if (url.pathname === '/auth/password' && req.method === 'POST') {
+    const b = await readBody(req);
+    if (limited('pw:' + ip, 10, 15 * 6e4)) return json(res, 429, { error: 'Too many attempts. Wait a few minutes and try again.' });
+    const name = String(b.name || '').trim().replace(/\s+/g, ' ').slice(0, 80);
+    const pw = String(b.password || '');
+    if (name.length < 2) return json(res, 400, { error: 'Type your name, so the team can see who changed what.' });
+    const eq = (a, c) => !!c && a.length === c.length && crypto.timingSafeEqual(Buffer.from(a), Buffer.from(c));
+    const role = eq(pw, PW.team) ? 'team' : eq(pw, PW.client) ? 'client' : null;
+    if (!role) return json(res, 400, { error: 'That password is not right.' });
+    const key = 'name:' + role + ':' + name.toLowerCase();
+    const ex = await store.personByEmail(key);
+    if (ex && !ex.active) return json(res, 403, { error: 'Access for this name has been turned off. Ask the Kontrapunkt team.' });
+    const p = ex || await store.upsertPerson({ id: crypto.randomUUID(), email: key, name, role, admin: role === 'team' });
+    res.setHeader('set-cookie', sessionCookie(p.id, role));
+    return json(res, 200, { ok: true });
+  }
   if (url.pathname === '/auth/request' && req.method === 'POST') {
     const b = await readBody(req); const email = normEmail(b.email);
     if (limited('ip:' + ip, 20, 15 * 6e4) || limited('em:' + email, 5, 15 * 6e4)) return json(res, 429, { error: 'Too many attempts. Wait a few minutes and try again.' });
